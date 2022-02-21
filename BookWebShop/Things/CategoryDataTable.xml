@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="3"
+ universal="password">
+    <Things>
+        <Thing
+         description=""
+         documentationContent=""
+         effectiveThingPackage="DataTableThing"
+         enabled="true"
+         homeMashup="DataTableEditor"
+         identifier=""
+         inheritedValueStream=""
+         name="CategoryDataTable"
+         projectName="BookWebShop"
+         published="false"
+         tags=""
+         thingTemplate="DataTable"
+         valueStream="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Data Thing Configuration"
+                 isMultiRow="false"
+                 name="DataThingSettings"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description="Persistence Provider Name"
+                             name="persistenceProvider"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <persistenceProvider>
+                            <![CDATA[
+                            ThingworxPersistenceProvider
+                            ]]>
+                            </persistenceProvider>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Data Shape Configuration"
+                 isMultiRow="false"
+                 name="Settings"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.friendlyName="Data Shape"
+                             baseType="DATASHAPENAME"
+                             description="Data shape"
+                             name="dataShape"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <accumulatedDataShape>
+                                <json>
+                                <![CDATA[
+                                {"fieldDefinitions":{"CategoryID":{"name":"CategoryID","aspects":{"isPrimaryKey":true},"description":"","baseType":"INTEGER","ordinal":0},"ParentCategoryID":{"name":"ParentCategoryID","aspects":{"isPrimaryKey":false},"description":"","baseType":"INTEGER","ordinal":2},"Name":{"name":"Name","aspects":{"isPrimaryKey":false},"description":"","baseType":"STRING","ordinal":1}}}
+                                ]]>
+                                </json>
+                            </accumulatedDataShape>
+                            <dataShape>
+                            <![CDATA[
+                            Category
+                            ]]>
+                            </dataShape>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Index Settings"
+                 isMultiRow="true"
+                 name="Indexes"
+                 ordinal="1">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.friendlyName="Index Field Names"
+                             baseType="STRING"
+                             description="Index fields"
+                             name="fieldNames"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Index Name"
+                             baseType="STRING"
+                             description="Index name"
+                             name="name"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows></Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+            <ThingShape>
+                <PropertyDefinitions></PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="AddOrUpdateCategoryDataTableEntry">
+                        <ResultType
+                         baseType="NOTHING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.dataShape="Category"
+                             baseType="INFOTABLE"
+                             description=""
+                             name="values"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="GetAllCategories">
+                        <ResultType
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="LoadCategoryDataTableEntry">
+                        <ResultType
+                         aspect.dataShape="Category"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="INTEGER"
+                             description=""
+                             name="categoryID"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="LoadDataTableEntriesWithParentName">
+                        <ResultType
+                         aspect.dataShape="CategoryDataShapeWithParentCategoryName"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions></EventDefinitions>
+                <ServiceMappings></ServiceMappings>
+                <ServiceImplementations>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="AddOrUpdateCategoryDataTableEntry">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        if(!values.CategoryID) {
+                                            values.CategoryID = getNextID();
+                                        }
+                                        
+                                        me.AddOrUpdateDataTableEntries({
+                                        	sourceType: undefined /* STRING */,
+                                        	values: values /* INFOTABLE */,
+                                        	location: undefined /* LOCATION */,
+                                        	source: undefined /* STRING */,
+                                        	tags: undefined /* TAGS */
+                                        });
+                                        
+                                        function getNextID() {
+                                        	let infoTable = me.GetDataTableEntries({maxItems: undefined /* NUMBER {"defaultValue":500} */});
+                                        	let params = {
+                                        		sortColumn: "CategoryID" /* STRING */,
+                                        		t: infoTable /* INFOTABLE */,
+                                        		ascending: false /* BOOLEAN {"defaultValue":true} */
+                                        	};
+                                        	let sortedInfoTable = Resources["InfoTableFunctions"].Sort(params);
+                                            return ++(sortedInfoTable[0].CategoryID);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="GetAllCategories">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let infotable = me.GetDataTableEntries({
+                                        	maxItems: undefined /* NUMBER {"defaultValue":500} */
+                                        });
+                                        let params = {
+                                        	fieldName: "ParentCategoryID" /* STRING */,
+                                        	t: infotable /* INFOTABLE */,
+                                        	value: "" /* STRING */
+                                        };
+                                        
+                                        // result: INFOTABLE
+                                        let result = Resources["InfoTableFunctions"].EQFilter(params);
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="LoadCategoryDataTableEntry">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = null;
+                                        if(categoryID) {
+                                            // result: INFOTABLE dataShape: ""
+                                        	result = me.GetDataTableEntryByKey({key: categoryID + "" /* STRING */});
+                                        } else {
+                                            result = me.CreateValues();
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="LoadDataTableEntriesWithParentName">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        // result: INFOTABLE dataShape: ""
+                                        let categories1 = me.GetDataTableEntries({
+                                        	maxItems: undefined /* NUMBER {"defaultValue":500} */
+                                        }).rows.toArray();
+                                        
+                                        let categories2 = me.GetDataTableEntries({
+                                        	maxItems: undefined /* NUMBER {"defaultValue":500} */
+                                        }).rows.toArray();
+                                        
+                                        let infotable = DataShapes["CategoryDataShapeWithParentCategoryName"].CreateValues();
+                                        categories1.forEach(row => {
+                                            let parentCategoryName = "";
+                                            if (row.ParentCategoryID) {
+                                                parentCategoryName = categories2.find(x => row.ParentCategoryID == x.CategoryID).Name;
+                                            }
+                                           // CategoryDataShapeWithParentCategoryName entry object
+                                        let newEntry = {
+                                            CategoryID: row.CategoryID, // INTEGER [Primary Key]
+                                            Name: row.Name, // STRING
+                                            ParentCategoryID: row.ParentCategoryID, // INTEGER
+                                            ParentCategoryName: parentCategoryName // STRING
+                                        };
+                                            infotable.AddRow(newEntry);
+                                        });
+                                        
+                                        let result = infotable;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions></Subscriptions>
+            </ThingShape>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations></AlertConfigurations>
+            <ImplementedShapes></ImplementedShapes>
+            <ThingProperties></ThingProperties>
+        </Thing>
+    </Things>
+</Entities>

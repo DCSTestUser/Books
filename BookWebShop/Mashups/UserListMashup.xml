@@ -1,0 +1,1069 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="3"
+ universal="password">
+    <Mashups>
+        <Mashup
+         aspect.isFlex="true"
+         aspect.isResponsive="true"
+         aspect.mashupType="mashup"
+         columns="0.0"
+         description=""
+         documentationContent=""
+         homeMashup=""
+         name="UserListMashup"
+         projectName="BookWebShop"
+         rows="0.0"
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Mashup Mobile Settings"
+                 isHidden="true"
+                 isMultiRow="false"
+                 name="MobileSettings"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="false"
+                             aspect.friendlyName="Disable Zoom"
+                             baseType="BOOLEAN"
+                             description="Disables zooming in and out within the mashup"
+                             name="disableZoom"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="true"
+                             aspect.friendlyName="Full Screen Mode"
+                             baseType="BOOLEAN"
+                             description="Open the mashup in full screen mode"
+                             name="fullScreenMode"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Height"
+                             baseType="STRING"
+                             description="The height of the mashup page"
+                             name="height"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="device-height"
+                             aspect.friendlyName="Height Type"
+                             baseType="STRING"
+                             description="Use the height of the device display, or a custom height (in px)"
+                             name="heightType"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="1.0"
+                             aspect.friendlyName="Initial Scale"
+                             baseType="NUMBER"
+                             description="The initial zoom scale when the mashup is loaded for the first time"
+                             name="initialScale"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Shortcut Icon Title"
+                             baseType="STRING"
+                             description="A title for the mashup shortcut on the iOS home screen"
+                             name="iosShortcutIconTitle"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="black-translucent"
+                             aspect.friendlyName="Status Bar Appearance"
+                             baseType="STRING"
+                             description="The style of the iOS status bar"
+                             name="iosStatusBarAppearance"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="10.0"
+                             aspect.friendlyName="Maximum Scale"
+                             baseType="NUMBER"
+                             description="The maximum scale that users can zoom out to"
+                             name="maximumScale"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="0.1"
+                             aspect.friendlyName="Minimum Scale"
+                             baseType="NUMBER"
+                             description="The minimum scale that users can zoom out to"
+                             name="minimumScale"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Width"
+                             baseType="STRING"
+                             description="The width of the mashup page"
+                             name="width"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="device-width"
+                             aspect.friendlyName="Width Type"
+                             baseType="STRING"
+                             description="Use the width of the device display, or a custom width (in px)"
+                             name="widthType"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <disableZoom>false</disableZoom>
+                            <fullScreenMode>true</fullScreenMode>
+                            <height>
+                            <![CDATA[
+                            device-height
+                            ]]>
+                            </height>
+                            <heightType>
+                            <![CDATA[
+                            device-height
+                            ]]>
+                            </heightType>
+                            <initialScale>1.0</initialScale>
+                            <iosShortcutIconTitle></iosShortcutIconTitle>
+                            <iosStatusBarAppearance>
+                            <![CDATA[
+                            black-translucent
+                            ]]>
+                            </iosStatusBarAppearance>
+                            <maximumScale>10.0</maximumScale>
+                            <minimumScale>0.1</minimumScale>
+                            <width>
+                            <![CDATA[
+                            device-width
+                            ]]>
+                            </width>
+                            <widthType>
+                            <![CDATA[
+                            device-width
+                            ]]>
+                            </widthType>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+            <ParameterDefinitions></ParameterDefinitions>
+            <Things></Things>
+            <ThingShapes></ThingShapes>
+            <ThingTemplates></ThingTemplates>
+            <mashupContent>
+            <![CDATA[
+            {
+              "CustomMashupCss" : "",
+              "Data" : {
+                "Session" : {
+                  "DataName" : "Session",
+                  "EntityName" : "",
+                  "EntityType" : "Session",
+                  "Id" : "session",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "SessionInterface",
+                    "Name" : "GetGlobalSessionValues",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetGlobalSessionValues"
+                  } ]
+                },
+                "Things_UserDataTable" : {
+                  "DataName" : "Things_UserDataTable",
+                  "EntityName" : "UserDataTable",
+                  "EntityType" : "Things",
+                  "Id" : "9a4d63c6-0dd3-4b9f-a7c8-94cc918356c8",
+                  "RefreshInterval" : 0,
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "3367bf76-1789-4318-98d6-255d8d721695",
+                    "Name" : "LoadDataTableEntriesWithUserCustomRole",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "LoadDataTableEntriesWithUserCustomRole"
+                  }, {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "e0d11001-07bc-4274-9a2d-58e55772c420",
+                    "Name" : "DeleteDataTableEntryByKey",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "DeleteDataTableEntryByKey"
+                  } ]
+                },
+                "UserExtensions" : {
+                  "DataName" : "UserExtensions",
+                  "EntityName" : "",
+                  "EntityType" : "UserExtensions",
+                  "Id" : "UserExtensions",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "UserExtensionInterface",
+                    "Name" : "GetCurrentUserExtensionProperties",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetCurrentUserExtensionProperties"
+                  } ]
+                }
+              },
+              "DataBindings" : [ {
+                "Id" : "e5e3f716-d112-4e50-90d6-7a5c554af8dc",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "InfoTable",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "LoadDataTableEntriesWithUserCustomRole",
+                "SourceSection" : "Things_UserDataTable",
+                "TargetArea" : "UI",
+                "TargetId" : "infotableselector-10",
+                "TargetSection" : ""
+              }, {
+                "Id" : "693eb2d9-69b2-4676-aebe-43059c4a1f92",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "AnyRowsSelected",
+                  "SourcePropertyBaseType" : "BOOLEAN",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "Visible",
+                  "TargetPropertyBaseType" : "BOOLEAN",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "UI",
+                "SourceDetails" : "",
+                "SourceId" : "infotableselector-10",
+                "SourceSection" : "",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcsbutton-6",
+                "TargetSection" : ""
+              }, {
+                "Id" : "be6e7acb-629a-46d9-b3a3-193e13ee994c",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "AnyRowsSelected",
+                  "SourcePropertyBaseType" : "BOOLEAN",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "Visible",
+                  "TargetPropertyBaseType" : "BOOLEAN",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "UI",
+                "SourceDetails" : "",
+                "SourceId" : "infotableselector-10",
+                "SourceSection" : "",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcsbutton-8",
+                "TargetSection" : ""
+              }, {
+                "Id" : "5e146937-d7be-40ee-b32a-802a44974323",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "UserID",
+                  "SourcePropertyBaseType" : "INTEGER",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "userID",
+                  "TargetPropertyBaseType" : "INTEGER",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "LoadDataTableEntriesWithUserCustomRole",
+                "SourceSection" : "Things_UserDataTable",
+                "TargetArea" : "UI",
+                "TargetId" : "navigationfunction-11",
+                "TargetSection" : ""
+              }, {
+                "Id" : "b70a26fc-edb8-45d8-8ba8-544f27d476aa",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "InfoTable",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "LoadDataTableEntriesWithUserCustomRole",
+                "SourceName" : "LoadDataTableEntriesWithUserCustomRole",
+                "SourceSection" : "Things_UserDataTable",
+                "TargetArea" : "UI",
+                "TargetId" : "gridadvanced-9",
+                "TargetSection" : ""
+              }, {
+                "Id" : "93437865-093c-4932-aabf-77fa543c266d",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "UserID",
+                  "SourcePropertyBaseType" : "INTEGER",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "key",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "LoadDataTableEntriesWithUserCustomRole",
+                "SourceSection" : "Things_UserDataTable",
+                "TargetArea" : "Data",
+                "TargetId" : "DeleteDataTableEntryByKey",
+                "TargetSection" : "Things_UserDataTable"
+              } ],
+              "DesignTimePermissions" : { },
+              "Events" : [ {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_UserDataTable",
+                "EventHandlerService" : "LoadDataTableEntriesWithUserCustomRole",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "6095e6fa-d9cf-4806-b99c-5070b5906e69"
+              }, {
+                "EventHandlerArea" : "UI",
+                "EventHandlerId" : "navigationfunction-11",
+                "EventHandlerService" : "Navigate",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "Clicked",
+                "EventTriggerId" : "ptcsbutton-6",
+                "EventTriggerSection" : "",
+                "Id" : "70e57f14-1e63-4742-b6fb-2ac2f41db14a"
+              }, {
+                "EventHandlerArea" : "UI",
+                "EventHandlerId" : "navigationfunction-12",
+                "EventHandlerService" : "Navigate",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "Clicked",
+                "EventTriggerId" : "ptcsbutton-5",
+                "EventTriggerSection" : "",
+                "Id" : "a9e55845-aa5e-44e8-9e47-19356e731512"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_UserDataTable",
+                "EventHandlerService" : "LoadDataTableEntriesWithUserCustomRole",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "WindowClosed",
+                "EventTriggerId" : "navigationfunction-12",
+                "EventTriggerSection" : "",
+                "Id" : "e8a4c432-bad2-427f-a9de-d0039bf47793"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_UserDataTable",
+                "EventHandlerService" : "LoadDataTableEntriesWithUserCustomRole",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "WindowClosed",
+                "EventTriggerId" : "navigationfunction-11",
+                "EventTriggerSection" : "",
+                "Id" : "6dd96597-7a09-4783-889b-39b16ce26e08"
+              }, {
+                "EventHandlerArea" : "UI",
+                "EventHandlerId" : "ptcsconfirmation-13",
+                "EventHandlerService" : "OpenConfirmation",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "Clicked",
+                "EventTriggerId" : "ptcsbutton-8",
+                "EventTriggerSection" : "",
+                "Id" : "bfba9289-d462-4510-aee8-976e765d30e6"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_UserDataTable",
+                "EventHandlerService" : "DeleteDataTableEntryByKey",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "ActionClick",
+                "EventTriggerId" : "ptcsconfirmation-13",
+                "EventTriggerSection" : "",
+                "Id" : "e651ca94-b24e-4ffd-b918-1e9fe0b8b230"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_UserDataTable",
+                "EventHandlerService" : "LoadDataTableEntriesWithUserCustomRole",
+                "EventTriggerArea" : "Data",
+                "EventTriggerEvent" : "ServiceInvokeCompleted",
+                "EventTriggerId" : "DeleteDataTableEntryByKey",
+                "EventTriggerSection" : "Things_UserDataTable",
+                "Id" : "69d3b5bb-b0d1-49dc-83f1-d49f53208de3"
+              } ],
+              "RunTimePermissions" : { },
+              "UI" : {
+                "Properties" : {
+                  "AddToDashboardButton" : "SimplePlus",
+                  "AddToDashboardButtonStyle" : "DefaultAddToDashboardButtonStyle",
+                  "Area" : "Mashup",
+                  "BGImage" : "",
+                  "BGImageRepeat" : "no-repeat",
+                  "BGImageSize" : "auto",
+                  "Columns" : 0,
+                  "ConfigureGadgetButton" : "SimpleGear",
+                  "ConfigureGadgetButtonStyle" : "DefaultConfigureGadgetButtonStyle",
+                  "DisplayName" : "Mashup",
+                  "EnableParameterEditing" : false,
+                  "Height" : 618,
+                  "Id" : "mashup-root",
+                  "IgnoreWarningsInViewMashup" : false,
+                  "IsPrintLayout" : false,
+                  "Left" : 0,
+                  "MashupToEditGadget" : "DefaultMashupToEditGadget",
+                  "MinHeight" : 0,
+                  "MinWidth" : 0,
+                  "ResponsiveLayout" : true,
+                  "Rows" : 0,
+                  "ShowDataLoading" : true,
+                  "Style" : "DefaultMashupStyle",
+                  "StyleTheme" : "BooksWebShopDefaultStyleTheme",
+                  "Title" : "",
+                  "TitleBar" : false,
+                  "TitleBarStyle" : "DefaultTitleBarStyle",
+                  "TitleBarText" : "Gadget Title Here",
+                  "Top" : 0,
+                  "Type" : "mashup",
+                  "UseMasterTheme" : false,
+                  "UseTheme" : false,
+                  "UseThemeForHybrids" : false,
+                  "Visible" : true,
+                  "Width" : 1024,
+                  "Z-index" : 10,
+                  "__TypeDisplayName" : "Mashup",
+                  "id_index" : 13,
+                  "supportsAutoResize" : true
+                },
+                "Widgets" : [ {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "DisplayName" : "container-2",
+                    "EnableExpandCollapse" : false,
+                    "ExpandCollapseTabLocation" : "inside",
+                    "Expanded" : true,
+                    "Id" : "flexcontainer-2",
+                    "LastContainer" : true,
+                    "Overlay" : false,
+                    "ResponsiveLayout" : true,
+                    "ShowDataLoading" : true,
+                    "ShowExpandCollapseTab" : false,
+                    "SourceURL" : "",
+                    "Style" : "DefaultContainerStyle",
+                    "StyleProperties" : { },
+                    "Type" : "flexcontainer",
+                    "UseTheme" : true,
+                    "Visible" : true,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Responsive Container",
+                    "align-content" : "flex-start",
+                    "align-items" : "flex-start",
+                    "flex-basis" : "auto",
+                    "flex-direction" : "column",
+                    "flex-grow" : 1,
+                    "flex-max-height" : "",
+                    "flex-max-width" : "",
+                    "flex-min-height" : "",
+                    "flex-min-width" : "",
+                    "flex-shrink" : 1,
+                    "flex-size" : "default",
+                    "flex-wrap" : "nowrap",
+                    "iconClass" : "widgets-flexcontainer",
+                    "justify-content" : "flex-start",
+                    "positioning" : "responsive",
+                    "userCannotRemove" : true
+                  },
+                  "Widgets" : [ {
+                    "Properties" : {
+                      "Area" : "UI",
+                      "DisplayName" : "container-4",
+                      "EnableExpandCollapse" : false,
+                      "ExpandCollapseTabLocation" : "inside",
+                      "Expanded" : true,
+                      "Id" : "flexcontainer-4",
+                      "LastContainer" : false,
+                      "Overlay" : false,
+                      "ResponsiveLayout" : false,
+                      "ShowDataLoading" : true,
+                      "ShowExpandCollapseTab" : false,
+                      "SourceURL" : "",
+                      "Style" : "DefaultContainerStyle",
+                      "StyleProperties" : { },
+                      "Type" : "flexcontainer",
+                      "UseTheme" : true,
+                      "Visible" : true,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Responsive Container",
+                      "align-content" : "flex-start",
+                      "align-items" : "flex-start",
+                      "flex-basis" : "auto",
+                      "flex-direction" : "row",
+                      "flex-grow" : 1,
+                      "flex-max-height" : "50px",
+                      "flex-max-width" : "",
+                      "flex-min-height" : "50px",
+                      "flex-min-width" : "",
+                      "flex-shrink" : 1,
+                      "flex-size" : "fixed",
+                      "flex-wrap" : "nowrap",
+                      "iconClass" : "widgets-flexcontainer-fixed",
+                      "isLocked" : false,
+                      "justify-content" : "flex-start",
+                      "positioning" : "responsive",
+                      "userCannotRemove" : false
+                    },
+                    "Widgets" : [ {
+                      "Properties" : {
+                        "Area" : "UI",
+                        "ButtonType" : "primary",
+                        "ContextID" : "",
+                        "Disabled" : false,
+                        "DisplayName" : "ptcs-button-5",
+                        "Id" : "ptcsbutton-5",
+                        "Label" : "Add",
+                        "LabelAlignment" : "center",
+                        "LastContainer" : false,
+                        "Left" : 64,
+                        "Margin" : "5",
+                        "ResponsiveLayout" : false,
+                        "ShowDataLoading" : true,
+                        "TabSequence" : 0,
+                        "Top" : 26,
+                        "Type" : "ptcsbutton",
+                        "UseTheme" : true,
+                        "Visible" : true,
+                        "Z-index" : 10,
+                        "__TypeDisplayName" : "Button"
+                      },
+                      "Widgets" : [ ]
+                    }, {
+                      "Properties" : {
+                        "Area" : "UI",
+                        "ButtonType" : "secondary",
+                        "ContextID" : "",
+                        "Disabled" : false,
+                        "DisplayName" : "ptcs-button-6",
+                        "Id" : "ptcsbutton-6",
+                        "Label" : "Edit",
+                        "LabelAlignment" : "center",
+                        "LastContainer" : false,
+                        "Left" : 189,
+                        "Margin" : "5",
+                        "ResponsiveLayout" : false,
+                        "ShowDataLoading" : true,
+                        "TabSequence" : 0,
+                        "Top" : 11,
+                        "Type" : "ptcsbutton",
+                        "UseTheme" : true,
+                        "Visible" : true,
+                        "Z-index" : 10,
+                        "__TypeDisplayName" : "Button"
+                      },
+                      "Widgets" : [ ]
+                    }, {
+                      "Properties" : {
+                        "Area" : "UI",
+                        "ButtonType" : "danger",
+                        "ContextID" : "",
+                        "Disabled" : false,
+                        "DisplayName" : "ptcs-button-8",
+                        "Id" : "ptcsbutton-8",
+                        "Label" : "Delete",
+                        "LabelAlignment" : "center",
+                        "LastContainer" : false,
+                        "Left" : 274,
+                        "Margin" : "5",
+                        "ResponsiveLayout" : false,
+                        "ShowDataLoading" : true,
+                        "TabSequence" : 0,
+                        "Top" : 21,
+                        "Type" : "ptcsbutton",
+                        "UseTheme" : true,
+                        "Visible" : true,
+                        "Z-index" : 10,
+                        "__TypeDisplayName" : "Button"
+                      },
+                      "Widgets" : [ ]
+                    }, {
+                      "Properties" : {
+                        "AnyRowsSelected" : false,
+                        "Area" : "UI",
+                        "DisplayName" : "infotableselector-10",
+                        "Height" : 28,
+                        "Id" : "infotableselector-10",
+                        "LastContainer" : false,
+                        "Left" : 444,
+                        "Margin" : "5",
+                        "NoRowsSelected" : false,
+                        "ResponsiveLayout" : false,
+                        "ShowDataLoading" : true,
+                        "Top" : 26,
+                        "Type" : "infotableselector",
+                        "Visible" : true,
+                        "Width" : 200,
+                        "Z-index" : 10,
+                        "__TypeDisplayName" : "Infotable Selector"
+                      },
+                      "Widgets" : [ ]
+                    } ]
+                  }, {
+                    "Properties" : {
+                      "Area" : "UI",
+                      "DisplayName" : "container-3",
+                      "EnableExpandCollapse" : false,
+                      "ExpandCollapseTabLocation" : "inside",
+                      "Expanded" : true,
+                      "Id" : "flexcontainer-3",
+                      "LastContainer" : true,
+                      "Overlay" : false,
+                      "ResponsiveLayout" : false,
+                      "ShowDataLoading" : true,
+                      "ShowExpandCollapseTab" : false,
+                      "SourceURL" : "",
+                      "Style" : "DefaultContainerStyle",
+                      "StyleProperties" : { },
+                      "Type" : "flexcontainer",
+                      "UseTheme" : true,
+                      "Visible" : true,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Responsive Container",
+                      "align-content" : "flex-start",
+                      "align-items" : "flex-start",
+                      "flex-basis" : "auto",
+                      "flex-direction" : "row",
+                      "flex-grow" : 1,
+                      "flex-max-height" : "",
+                      "flex-max-width" : "",
+                      "flex-min-height" : "",
+                      "flex-min-width" : "",
+                      "flex-shrink" : 1,
+                      "flex-size" : "default",
+                      "flex-wrap" : "nowrap",
+                      "iconClass" : "widgets-flexcontainer",
+                      "isLocked" : true,
+                      "justify-content" : "flex-start",
+                      "positioning" : "responsive",
+                      "userCannotRemove" : false
+                    },
+                    "Widgets" : [ {
+                      "Properties" : {
+                        "Area" : "UI",
+                        "AutoScroll" : true,
+                        "CellBorderStyle" : "DefaultGridAdvancedCellBorderStyle",
+                        "CellValidationErrorStyle" : "DefaultGridAdvancedCellValidationErrorStyle",
+                        "CellValidationErrorTooltipStyle" : "DefaultGridAdvancedCellValidationErrorTooltipStyle",
+                        "ColumnFormat" : {
+                          "formatInfo" : [ {
+                            "Align" : "left",
+                            "AllowEdit" : false,
+                            "Description" : "",
+                            "FieldName" : "UserID",
+                            "FormatOptions" : {
+                              "FormatString" : "0",
+                              "formatInfo" : {
+                                "StateFormats" : [ ]
+                              },
+                              "formatText" : "View",
+                              "renderer" : "INTEGER",
+                              "roundingEnabled" : true,
+                              "showDependentField" : false
+                            },
+                            "Title" : "UserID",
+                            "ValidationExpression" : "",
+                            "ValidationMessage" : "",
+                            "Width" : "auto",
+                            "headerTextAlignment" : "left",
+                            "hidden" : true,
+                            "inLayout" : true
+                          }, {
+                            "Align" : "left",
+                            "AllowEdit" : false,
+                            "Description" : "",
+                            "FieldName" : "FirstName",
+                            "FormatOptions" : {
+                              "FormatString" : "full",
+                              "formatInfo" : {
+                                "StateFormats" : [ ]
+                              },
+                              "formatText" : "View",
+                              "renderer" : "STRING",
+                              "roundingEnabled" : true,
+                              "showDependentField" : false
+                            },
+                            "Title" : "FirstName",
+                            "ValidationExpression" : "",
+                            "ValidationMessage" : "",
+                            "Width" : "auto",
+                            "headerTextAlignment" : "left",
+                            "hidden" : false,
+                            "inLayout" : true
+                          }, {
+                            "Align" : "left",
+                            "AllowEdit" : false,
+                            "Description" : "",
+                            "FieldName" : "LastName",
+                            "FormatOptions" : {
+                              "FormatString" : "full",
+                              "formatInfo" : {
+                                "StateFormats" : [ ]
+                              },
+                              "formatText" : "View",
+                              "renderer" : "STRING",
+                              "roundingEnabled" : true,
+                              "showDependentField" : false
+                            },
+                            "Title" : "LastName",
+                            "ValidationExpression" : "",
+                            "ValidationMessage" : "",
+                            "Width" : "auto",
+                            "headerTextAlignment" : "left",
+                            "hidden" : false,
+                            "inLayout" : true
+                          }, {
+                            "Align" : "left",
+                            "AllowEdit" : false,
+                            "Description" : "",
+                            "FieldName" : "Username",
+                            "FormatOptions" : {
+                              "FormatString" : "full",
+                              "formatInfo" : {
+                                "StateFormats" : [ ]
+                              },
+                              "formatText" : "View",
+                              "renderer" : "STRING",
+                              "roundingEnabled" : true,
+                              "showDependentField" : false
+                            },
+                            "Title" : "Username",
+                            "ValidationExpression" : "",
+                            "ValidationMessage" : "",
+                            "Width" : "auto",
+                            "headerTextAlignment" : "left",
+                            "hidden" : false,
+                            "inLayout" : true
+                          }, {
+                            "Align" : "left",
+                            "AllowEdit" : false,
+                            "Description" : "",
+                            "FieldName" : "Password",
+                            "FormatOptions" : {
+                              "FormatString" : "",
+                              "formatInfo" : {
+                                "StateFormats" : [ ]
+                              },
+                              "formatText" : "View",
+                              "renderer" : "DEFAULT",
+                              "roundingEnabled" : true,
+                              "showDependentField" : false
+                            },
+                            "Title" : "Password",
+                            "ValidationExpression" : "",
+                            "ValidationMessage" : "",
+                            "Width" : "auto",
+                            "headerTextAlignment" : "left",
+                            "hidden" : false,
+                            "inLayout" : true
+                          }, {
+                            "Align" : "left",
+                            "AllowEdit" : false,
+                            "Description" : "",
+                            "FieldName" : "Address",
+                            "FormatOptions" : {
+                              "FormatString" : "full",
+                              "formatInfo" : {
+                                "StateFormats" : [ ]
+                              },
+                              "formatText" : "View",
+                              "renderer" : "STRING",
+                              "roundingEnabled" : true,
+                              "showDependentField" : false
+                            },
+                            "Title" : "Address",
+                            "ValidationExpression" : "",
+                            "ValidationMessage" : "",
+                            "Width" : "auto",
+                            "headerTextAlignment" : "left",
+                            "hidden" : false,
+                            "inLayout" : true
+                          }, {
+                            "Align" : "left",
+                            "AllowEdit" : false,
+                            "Description" : "",
+                            "FieldName" : "Email",
+                            "FormatOptions" : {
+                              "FormatString" : "full",
+                              "formatInfo" : {
+                                "StateFormats" : [ ]
+                              },
+                              "formatText" : "View",
+                              "renderer" : "STRING",
+                              "roundingEnabled" : true,
+                              "showDependentField" : false
+                            },
+                            "Title" : "Email",
+                            "ValidationExpression" : "",
+                            "ValidationMessage" : "",
+                            "Width" : "auto",
+                            "headerTextAlignment" : "left",
+                            "hidden" : false,
+                            "inLayout" : true
+                          }, {
+                            "Align" : "left",
+                            "AllowEdit" : false,
+                            "Description" : "",
+                            "FieldName" : "CustomRoleID",
+                            "FormatOptions" : {
+                              "FormatString" : "0",
+                              "formatInfo" : {
+                                "StateFormats" : [ ]
+                              },
+                              "formatText" : "View",
+                              "renderer" : "INTEGER",
+                              "roundingEnabled" : true,
+                              "showDependentField" : false
+                            },
+                            "Title" : "CustomRoleID",
+                            "ValidationExpression" : "",
+                            "ValidationMessage" : "",
+                            "Width" : "auto",
+                            "headerTextAlignment" : "left",
+                            "hidden" : true,
+                            "inLayout" : true
+                          }, {
+                            "Align" : "left",
+                            "AllowEdit" : false,
+                            "Description" : "",
+                            "FieldName" : "CustomRoleName",
+                            "FormatOptions" : {
+                              "FormatString" : "full",
+                              "formatInfo" : {
+                                "StateFormats" : [ ]
+                              },
+                              "formatText" : "View",
+                              "renderer" : "STRING",
+                              "roundingEnabled" : true,
+                              "showDependentField" : false
+                            },
+                            "Title" : "CustomRoleName",
+                            "ValidationExpression" : "",
+                            "ValidationMessage" : "",
+                            "Width" : "auto",
+                            "headerTextAlignment" : "left",
+                            "hidden" : false,
+                            "inLayout" : true
+                          } ]
+                        },
+                        "Configuration" : "",
+                        "ConfigurationId" : 0,
+                        "CookiePersistence" : true,
+                        "DataOverflow" : "clipped",
+                        "DataServiceBindingDef" : {
+                          "dataName" : "Things_UserDataTable",
+                          "entityName" : "UserDataTable",
+                          "entityType" : "Things",
+                          "sourceId" : "LoadDataTableEntriesWithUserCustomRole",
+                          "target" : "LoadDataTableEntriesWithUserCustomRole"
+                        },
+                        "DefaultSelectedRows" : "",
+                        "DisplayName" : "gridadvanced-9",
+                        "DisplayOnlyMode" : false,
+                        "EditButtonsLocation" : "top-right",
+                        "EnableAddDeleteButtons" : false,
+                        "EnableCallbackOnSelectedRowsChange" : true,
+                        "EnableContextMenu" : true,
+                        "EnableEditButtons" : false,
+                        "EnableFilterEventOnConfigChange" : true,
+                        "EnableFooter" : false,
+                        "EnableGridReset" : false,
+                        "EnableGridSearch" : false,
+                        "EnableKeyboardNavigation" : true,
+                        "EnableSorting" : false,
+                        "FocusStyle" : "DefaultFocusStyle",
+                        "GridResetButtonLocation" : "top-right",
+                        "GridSearchLocation" : "top-left",
+                        "HeaderOverflow" : "tooltip",
+                        "Height" : 200,
+                        "IDFieldName" : "id",
+                        "Id" : "gridadvanced-9",
+                        "IsEditable" : false,
+                        "LastContainer" : false,
+                        "Left" : 354,
+                        "MaxHeaderHeight" : 100,
+                        "MinRowHeight" : 30,
+                        "ResponsiveLayout" : true,
+                        "RowAlternateBackgroundStyle" : "DefaultGridAdvancedRowAlternateBackgroundStyle",
+                        "RowBackgroundStyle" : "DefaultGridAdvancedRowBackgroundStyle",
+                        "RowBorderStyle" : "DefaultGridAdvancedRowBorderStyle",
+                        "RowFormat_StateParameters" : [ ],
+                        "RowHoverStyle" : "DefaultGridAdvancedRowHoverStyle",
+                        "RowSelectedStyle" : "DefaultGridAdvancedRowSelectedStyle",
+                        "RowSelection" : "single",
+                        "SelectedRows" : "",
+                        "ShowDataLoading" : true,
+                        "SortAscendingStyle" : "DefaultSortAscendingStyle",
+                        "SortDescendingStyle" : "DefaultSortDescendingStyle",
+                        "TableFooterStyle" : "DefaultGridAdvancedFooterStyle",
+                        "TableHeaderStyle" : "DefaultGridAdvancedHeaderStyle",
+                        "TableWrapperStyle" : "DefaultGridAdvancedWrapperStyle",
+                        "ToolbarStyle" : "DefaultToolbarStyle",
+                        "TooltipStyle" : "DefaultTooltipStyle",
+                        "Top" : 141,
+                        "Type" : "gridadvanced",
+                        "UseTheme" : true,
+                        "Visible" : true,
+                        "Width" : 400,
+                        "Z-index" : 10,
+                        "__TypeDisplayName" : "Grid Advanced"
+                      },
+                      "Widgets" : [ ]
+                    } ]
+                  } ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "ClickOutsideToClose" : false,
+                    "CloseButton" : false,
+                    "DisplayName" : "NavigateToUserEditWithParams",
+                    "Id" : "navigationfunction-11",
+                    "LastContainer" : false,
+                    "Left" : null,
+                    "MashupParameters" : [ {
+                      "BaseType" : "INTEGER",
+                      "Description" : "",
+                      "ParameterName" : "userID",
+                      "ParmDef" : {
+                        "aspects" : {
+                          "bindingDirection" : "BOTH",
+                          "isMandatory" : "false"
+                        },
+                        "baseType" : "INTEGER",
+                        "description" : "",
+                        "name" : "userID",
+                        "ordinal" : 0
+                      }
+                    } ],
+                    "MissingMashupMessage" : "",
+                    "PopupHeight" : "500",
+                    "PopupScrollbar" : "auto",
+                    "PopupTitle" : "",
+                    "PopupWidth" : "400",
+                    "ReloadOnReplace" : false,
+                    "ResponsiveLayout" : false,
+                    "ShowDataLoading" : true,
+                    "TargetMashup" : "UserEditMashup",
+                    "TargetWindowType" : "modal-popup",
+                    "Text" : "tw.navigationfunction-ide.properties.text.default-value",
+                    "Top" : null,
+                    "Type" : "navigationfunction",
+                    "Visible" : true,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "navigationfunction",
+                    "_currentParameterDefs" : [ {
+                      "BaseType" : "INTEGER",
+                      "DefaultValue" : "-1",
+                      "Description" : "",
+                      "ParameterName" : "userID",
+                      "bindingDirection" : "Both",
+                      "bindingType" : "Property",
+                      "isBindingSource" : true,
+                      "isBindingTarget" : true,
+                      "shown" : true
+                    } ]
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "ClickOutsideToClose" : false,
+                    "CloseButton" : false,
+                    "DisplayName" : "NavigateToUserEditNoParams",
+                    "Id" : "navigationfunction-12",
+                    "LastContainer" : false,
+                    "Left" : null,
+                    "MashupParameters" : [ {
+                      "BaseType" : "INTEGER",
+                      "Description" : "",
+                      "ParameterName" : "userID",
+                      "ParmDef" : {
+                        "aspects" : {
+                          "bindingDirection" : "BOTH",
+                          "isMandatory" : "false"
+                        },
+                        "baseType" : "INTEGER",
+                        "description" : "",
+                        "name" : "userID",
+                        "ordinal" : 0
+                      }
+                    } ],
+                    "MissingMashupMessage" : "",
+                    "PopupHeight" : "500",
+                    "PopupScrollbar" : "auto",
+                    "PopupTitle" : "",
+                    "PopupWidth" : "400",
+                    "ReloadOnReplace" : false,
+                    "ResponsiveLayout" : false,
+                    "ShowDataLoading" : true,
+                    "TargetMashup" : "UserEditMashup",
+                    "TargetWindowType" : "modal-popup",
+                    "Text" : "tw.navigationfunction-ide.properties.text.default-value",
+                    "Top" : null,
+                    "Type" : "navigationfunction",
+                    "Visible" : true,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "navigationfunction",
+                    "_currentParameterDefs" : [ {
+                      "BaseType" : "INTEGER",
+                      "Description" : "",
+                      "ParameterName" : "userID",
+                      "bindingDirection" : "Both",
+                      "bindingType" : "Property",
+                      "isBindingSource" : true,
+                      "isBindingTarget" : true,
+                      "shown" : true
+                    } ]
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "ActionButtonLabel" : "Yes",
+                    "ActionButtonPosition" : "left",
+                    "ActionButtonTooltipField" : "",
+                    "ActionButtonType" : "danger",
+                    "Area" : "UI",
+                    "CancelButtonLabel" : "No",
+                    "CancelButtonTooltipField" : "",
+                    "CloseButtonTooltipField" : "close",
+                    "DialogHeight" : "260",
+                    "DialogWidth" : "400",
+                    "DisplayCloseButton" : false,
+                    "DisplayName" : "ConfirmUserDelete",
+                    "DisplaySecondaryAction" : false,
+                    "Id" : "ptcsconfirmation-13",
+                    "LastContainer" : false,
+                    "Left" : null,
+                    "MessageText" : "Are You sure that You want to delete this User?",
+                    "ResponsiveLayout" : false,
+                    "SecondButtonLabel" : "Action",
+                    "SecondButtonTooltipField" : "",
+                    "ShowDataLoading" : true,
+                    "TitleText" : "Confirmation",
+                    "Top" : null,
+                    "Type" : "ptcsconfirmation",
+                    "UseTheme" : true,
+                    "Visible" : true,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Confirmation"
+                  },
+                  "Widgets" : [ ]
+                } ]
+              },
+              "mashupType" : "mashup"
+            }
+            ]]>
+            </mashupContent>
+            <preview></preview>
+        </Mashup>
+    </Mashups>
+</Entities>

@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="3"
+ universal="password">
+    <Things>
+        <Thing
+         description=""
+         documentationContent=""
+         effectiveThingPackage="DataTableThing"
+         enabled="true"
+         homeMashup="DataTableEditor"
+         identifier=""
+         inheritedValueStream=""
+         name="UserDataTable"
+         projectName="BookWebShop"
+         published="false"
+         tags=""
+         thingTemplate="DataTable"
+         valueStream="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Data Thing Configuration"
+                 isMultiRow="false"
+                 name="DataThingSettings"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description="Persistence Provider Name"
+                             name="persistenceProvider"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <persistenceProvider>
+                            <![CDATA[
+                            ThingworxPersistenceProvider
+                            ]]>
+                            </persistenceProvider>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Data Shape Configuration"
+                 isMultiRow="false"
+                 name="Settings"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.friendlyName="Data Shape"
+                             baseType="DATASHAPENAME"
+                             description="Data shape"
+                             name="dataShape"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <accumulatedDataShape>
+                                <json>
+                                <![CDATA[
+                                {"fieldDefinitions":{"Email":{"name":"Email","aspects":{"isPrimaryKey":false},"description":"","baseType":"STRING","ordinal":2},"Address":{"name":"Address","aspects":{"isPrimaryKey":false},"description":"","baseType":"STRING","ordinal":0},"Username":{"name":"Username","aspects":{"isPrimaryKey":false},"description":"","baseType":"STRING","ordinal":7},"FirstName":{"name":"FirstName","aspects":{"isPrimaryKey":false},"description":"","baseType":"STRING","ordinal":3},"UserID":{"name":"UserID","aspects":{"isPrimaryKey":true},"description":"","baseType":"INTEGER","ordinal":6},"CustomRoleID":{"name":"CustomRoleID","aspects":{"isPrimaryKey":false},"description":"","baseType":"INTEGER","ordinal":1},"LastName":{"name":"LastName","aspects":{"isPrimaryKey":false},"description":"","baseType":"STRING","ordinal":4},"Password":{"name":"Password","aspects":{"isPrimaryKey":false},"description":"","baseType":"PASSWORD","ordinal":5}}}
+                                ]]>
+                                </json>
+                            </accumulatedDataShape>
+                            <dataShape>
+                            <![CDATA[
+                            User
+                            ]]>
+                            </dataShape>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Index Settings"
+                 isMultiRow="true"
+                 name="Indexes"
+                 ordinal="1">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.friendlyName="Index Field Names"
+                             baseType="STRING"
+                             description="Index fields"
+                             name="fieldNames"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Index Name"
+                             baseType="STRING"
+                             description="Index name"
+                             name="name"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows></Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+            <ThingShape>
+                <PropertyDefinitions></PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="AddOrUpdateUserDataTableEntry">
+                        <ResultType
+                         baseType="NOTHING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.dataShape="UserWithPlainTextPassword"
+                             baseType="INFOTABLE"
+                             description=""
+                             name="values"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="LoadDataTableEntriesWithUserCustomRole">
+                        <ResultType
+                         aspect.dataShape="UserWithCustomRoleName"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="LoadUserDataTableEntry">
+                        <ResultType
+                         aspect.dataShape="UserWithCustomRoleName"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="INTEGER"
+                             description=""
+                             name="userID"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions></EventDefinitions>
+                <ServiceMappings></ServiceMappings>
+                <ServiceImplementations>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="AddOrUpdateUserDataTableEntry">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        if(!values.UserID) {
+                                            values.UserID = getNextID();
+                                        }
+                                        //// Encryption
+                                        let hashKey = "bfeea00226518fea9b0eed9ab431efc69f2ea1ab4ab5d41376880b07";
+                                        //let paramsPassword = {
+                                        //    data: values.Password
+                                        //};
+                                        //let encriptedValue = Resources["EncryptionServices"].EncryptPropertyValue(paramsPassword);
+                                        
+                                        var paramsEncK = {
+                                        	data: values.Password /* STRING */,
+                                        	key: hashKey /* STRING */
+                                        };
+                                        
+                                        let encriptedPass = Resources["EncryptionServices"].EncryptWithKey(paramsEncK);
+                                        
+                                        // Decryption
+                                        //let paramsDecK = {
+                                        //	data: encripted /* STRING */,
+                                        //	key: hashKey /* STRING */
+                                        //};
+                                        //let decripted = Resources["EncryptionServices"].DecryptWithKey(paramsDecK);
+                                        
+                                        values.Password = encriptedPass;
+                                        
+                                        me.AddOrUpdateDataTableEntries({
+                                        	sourceType: undefined /* STRING */,
+                                        	values: values /* INFOTABLE */,
+                                        	location: undefined /* LOCATION */,
+                                        	source: undefined /* STRING */,
+                                        	tags: undefined /* TAGS */
+                                        });
+                                        
+                                        
+                                        function getNextID() {
+                                            let infoTableSize = me.GetDataTableEntries({maxItems: undefined /* NUMBER {"defaultValue":500} */}).getRowCount();
+                                        	if (infoTableSize > 0) {
+                                                let infoTable = me.GetDataTableEntries({maxItems: undefined /* NUMBER {"defaultValue":500} */});
+                                                let params = {
+                                                    sortColumn: "UserID" /* STRING */,
+                                                    t: infoTable /* INFOTABLE */,
+                                                    ascending: false /* BOOLEAN {"defaultValue":true} */
+                                                };
+                                                let sortedInfoTable = Resources["InfoTableFunctions"].Sort(params);
+                                                return ++(sortedInfoTable[0].UserID);
+                                            }
+                                            else return 1;
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="LoadDataTableEntriesWithUserCustomRole">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        // result: INFOTABLE dataShape: ""
+                                        let user = me.GetDataTableEntries({
+                                        	maxItems: undefined /* NUMBER {"defaultValue":500} */
+                                        }).rows.toArray();
+                                        
+                                        let customRole = Things["CustomRoleDataTabe"].GetDataTableEntries({
+                                        	maxItems: undefined /* NUMBER {"defaultValue":500} */
+                                        }).rows.toArray();
+                                        
+                                        //let infotable = Things["CustomRoleDataTabe"].GetDataTableEntries({
+                                        //	maxItems: undefined /* NUMBER {"defaultValue":500} */
+                                        //});
+                                        
+                                        let infotable = DataShapes["UserWithCustomRoleName"].CreateValues();
+                                        user.forEach(row => {
+                                            let customRoleName = customRole.find(x => row.CustomRoleID == x.CustomRoleID).Name;
+                                           
+                                        let newEntry = {
+                                            UserID: row.UserID, // INTEGER [Primary Key]
+                                            FirstName: row.FirstName, // STRING
+                                            LastName: row.LastName, // STRING
+                                            Password: row.Password, // STRING
+                                            Username: row.Username, // STRING
+                                            Address: row.Address, // STRING
+                                            Email: row.Email, // STRING
+                                            CustomRoleID: row.CustomRoleID, // INTEGER
+                                            CustomRoleName: customRoleName // STRING
+                                        };
+                                            infotable.AddRow(newEntry);
+                                        });
+                                        
+                                        let result = infotable;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="LoadUserDataTableEntry">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = null;
+                                        if(userID) {
+                                            // result: INFOTABLE dataShape: ""
+                                        	result = me.GetDataTableEntryByKey({key: userID + "" /* STRING */});
+                                        } else {
+                                            result = me.CreateValues();
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions></Subscriptions>
+            </ThingShape>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations></AlertConfigurations>
+            <ImplementedShapes></ImplementedShapes>
+            <ThingProperties></ThingProperties>
+        </Thing>
+    </Things>
+</Entities>

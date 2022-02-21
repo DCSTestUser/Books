@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="3"
+ universal="password">
+    <StyleThemes>
+        <StyleTheme
+         description=""
+         documentationContent=""
+         homeMashup=""
+         name="BooksWebShopDefaultStyleTheme"
+         projectName="BookWebShop"
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <content>
+            <![CDATA[
+            {
+              "props" : [ {
+                "name" : "e-button-primary-fontcolor",
+                "value" : "#fff"
+              }, {
+                "name" : "e-button-secondary-fontcolor",
+                "value" : "#fff"
+              }, {
+                "name" : "e-button-tertiary-fontcolor",
+                "value" : "#fff"
+              }, {
+                "name" : "e-button-danger-fontcolor",
+                "value" : "#fff"
+              }, {
+                "name" : "e-button-secondary-backgroundcolor",
+                "value" : "rgba(92,184,92,1)"
+              }, {
+                "name" : "e-button-primary-backgroundcolor",
+                "value" : "#0275d8"
+              }, {
+                "name" : "e-button-secondary-hover-bordercolor",
+                "value" : ""
+              }, {
+                "name" : "e-button-secondary-hover-backgroundcolor",
+                "value" : "rgba(104,187,126,1)"
+              }, {
+                "name" : "e-grid-row-backgroundcolor",
+                "value" : "rgba(255,255,255,1)"
+              }, {
+                "name" : "e-grid-header-backgroundcolor",
+                "value" : "#0275d8"
+              }, {
+                "name" : "e-grid-header-label-fontcolor",
+                "value" : "#fff"
+              }, {
+                "name" : "e-grid-row-backgroundcolor-hover",
+                "value" : "rgba(60,133,215,1)"
+              }, {
+                "name" : "e-grid-text-fontcolor-hover",
+                "value" : "#fff"
+              }, {
+                "name" : "e-grid-row-backgroundcolor-selected",
+                "value" : "rgba(32,132,182,1)"
+              }, {
+                "name" : "e-grid-text-fontcolor-selected",
+                "value" : "#fff"
+              } ],
+              "version" : "0.1"
+            }
+            ]]>
+            </content>
+            <preview></preview>
+        </StyleTheme>
+    </StyleThemes>
+</Entities>

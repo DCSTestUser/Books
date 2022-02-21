@@ -1,0 +1,1793 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="3"
+ universal="password">
+    <Mashups>
+        <Mashup
+         aspect.isFlex="true"
+         aspect.isResponsive="true"
+         aspect.mashupType="mashup"
+         columns="0.0"
+         description=""
+         documentationContent=""
+         homeMashup=""
+         name="BookEditMashup"
+         projectName="BookWebShop"
+         rows="0.0"
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Mashup Mobile Settings"
+                 isHidden="true"
+                 isMultiRow="false"
+                 name="MobileSettings"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="false"
+                             aspect.friendlyName="Disable Zoom"
+                             baseType="BOOLEAN"
+                             description="Disables zooming in and out within the mashup"
+                             name="disableZoom"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="true"
+                             aspect.friendlyName="Full Screen Mode"
+                             baseType="BOOLEAN"
+                             description="Open the mashup in full screen mode"
+                             name="fullScreenMode"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Height"
+                             baseType="STRING"
+                             description="The height of the mashup page"
+                             name="height"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="device-height"
+                             aspect.friendlyName="Height Type"
+                             baseType="STRING"
+                             description="Use the height of the device display, or a custom height (in px)"
+                             name="heightType"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="1.0"
+                             aspect.friendlyName="Initial Scale"
+                             baseType="NUMBER"
+                             description="The initial zoom scale when the mashup is loaded for the first time"
+                             name="initialScale"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Shortcut Icon Title"
+                             baseType="STRING"
+                             description="A title for the mashup shortcut on the iOS home screen"
+                             name="iosShortcutIconTitle"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="black-translucent"
+                             aspect.friendlyName="Status Bar Appearance"
+                             baseType="STRING"
+                             description="The style of the iOS status bar"
+                             name="iosStatusBarAppearance"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="10.0"
+                             aspect.friendlyName="Maximum Scale"
+                             baseType="NUMBER"
+                             description="The maximum scale that users can zoom out to"
+                             name="maximumScale"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="0.1"
+                             aspect.friendlyName="Minimum Scale"
+                             baseType="NUMBER"
+                             description="The minimum scale that users can zoom out to"
+                             name="minimumScale"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Width"
+                             baseType="STRING"
+                             description="The width of the mashup page"
+                             name="width"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="device-width"
+                             aspect.friendlyName="Width Type"
+                             baseType="STRING"
+                             description="Use the width of the device display, or a custom width (in px)"
+                             name="widthType"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <disableZoom>false</disableZoom>
+                            <fullScreenMode>true</fullScreenMode>
+                            <height>
+                            <![CDATA[
+                            device-height
+                            ]]>
+                            </height>
+                            <heightType>
+                            <![CDATA[
+                            device-height
+                            ]]>
+                            </heightType>
+                            <initialScale>1.0</initialScale>
+                            <iosShortcutIconTitle></iosShortcutIconTitle>
+                            <iosStatusBarAppearance>
+                            <![CDATA[
+                            black-translucent
+                            ]]>
+                            </iosStatusBarAppearance>
+                            <maximumScale>10.0</maximumScale>
+                            <minimumScale>0.1</minimumScale>
+                            <width>
+                            <![CDATA[
+                            device-width
+                            ]]>
+                            </width>
+                            <widthType>
+                            <![CDATA[
+                            device-width
+                            ]]>
+                            </widthType>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+            <ParameterDefinitions>
+                <FieldDefinition
+                 aspect.bindingDirection="BOTH"
+                 aspect.isMandatory="false"
+                 baseType="INTEGER"
+                 description=""
+                 name="bookID"
+                 ordinal="0"></FieldDefinition>
+            </ParameterDefinitions>
+            <Things></Things>
+            <ThingShapes></ThingShapes>
+            <ThingTemplates></ThingTemplates>
+            <mashupContent>
+            <![CDATA[
+            {
+              "CustomMashupCss" : "",
+              "Data" : {
+                "Session" : {
+                  "DataName" : "Session",
+                  "EntityName" : "",
+                  "EntityType" : "Session",
+                  "Id" : "session",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "SessionInterface",
+                    "Name" : "GetGlobalSessionValues",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetGlobalSessionValues"
+                  } ]
+                },
+                "Things_AuthorDataTable" : {
+                  "DataName" : "Things_AuthorDataTable",
+                  "EntityName" : "AuthorDataTable",
+                  "EntityType" : "Things",
+                  "Id" : "11325a2c-6273-49f7-a3a2-8ef57e6ae0cb",
+                  "RefreshInterval" : 0,
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "0fb208b3-e952-41b0-a907-4a9fd1d12871",
+                    "Name" : "LoadAuthorsWithFullName",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "LoadAuthorsWithFullName"
+                  } ]
+                },
+                "Things_BookDataTable" : {
+                  "DataName" : "Things_BookDataTable",
+                  "EntityName" : "BookDataTable",
+                  "EntityType" : "Things",
+                  "Id" : "411bf34a-653b-4489-9f64-863866d80038",
+                  "RefreshInterval" : 0,
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "0e19c1b6-1199-4d3f-a3ec-75cd6146d16e",
+                    "Name" : "LoadBookDataTableEntryByKey",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "LoadBookDataTableEntryByKey"
+                  }, {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "7f80d983-6519-4628-b66b-09ac60b26c6b",
+                    "Name" : "AddOrUpdateBookDataTableEntry",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "AddOrUpdateBookDataTableEntry"
+                  } ]
+                },
+                "Things_CategoryDataTable" : {
+                  "DataName" : "Things_CategoryDataTable",
+                  "EntityName" : "CategoryDataTable",
+                  "EntityType" : "Things",
+                  "Id" : "bb88b6b4-710c-45a4-9db6-50f7c09a609a",
+                  "RefreshInterval" : 0,
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "986145e0-15f5-406e-add4-280af1123358",
+                    "Name" : "GetDataTableEntries",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetDataTableEntries"
+                  } ]
+                },
+                "Things_PublisherDataTable" : {
+                  "DataName" : "Things_PublisherDataTable",
+                  "EntityName" : "PublisherDataTable",
+                  "EntityType" : "Things",
+                  "Id" : "e0d5c02e-bef8-4d74-8c61-2e8ede8bc4b2",
+                  "RefreshInterval" : 0,
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "345d59bb-f2c8-4f11-9245-0b7e91dc79e3",
+                    "Name" : "GetDataTableEntries",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetDataTableEntries"
+                  } ]
+                },
+                "UserExtensions" : {
+                  "DataName" : "UserExtensions",
+                  "EntityName" : "",
+                  "EntityType" : "UserExtensions",
+                  "Id" : "UserExtensions",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "UserExtensionInterface",
+                    "Name" : "GetCurrentUserExtensionProperties",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetCurrentUserExtensionProperties"
+                  } ]
+                }
+              },
+              "DataBindings" : [ {
+                "Id" : "1802befd-4713-4ce6-92bf-c7b1a0c8696e",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "bookID",
+                  "SourcePropertyBaseType" : "INTEGER",
+                  "SourcePropertyType" : "property",
+                  "TargetProperty" : "bookID",
+                  "TargetPropertyBaseType" : "INTEGER",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "LoadBookDataTableEntryByKey",
+                "TargetSection" : "Things_BookDataTable"
+              }, {
+                "Id" : "d66b7cb3-7845-473b-9866-ac2f4a60d0a9",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "BookID",
+                  "SourcePropertyBaseType" : "INTEGER",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "Text",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "LoadBookDataTableEntryByKey",
+                "SourceSection" : "Things_BookDataTable",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcstextfield-14",
+                "TargetSection" : ""
+              }, {
+                "Id" : "43559043-f8ba-4e5e-8fc1-78423325c71f",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Image",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "Text",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "LoadBookDataTableEntryByKey",
+                "SourceSection" : "Things_BookDataTable",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcstextfield-9",
+                "TargetSection" : ""
+              }, {
+                "Id" : "9a1c99ea-f1ca-48ba-966a-5128f1296d03",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "ISBN",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "Text",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "LoadBookDataTableEntryByKey",
+                "SourceSection" : "Things_BookDataTable",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcstextfield-5",
+                "TargetSection" : ""
+              }, {
+                "Id" : "ff207ecf-5819-4775-a8ba-0d8f08245fbc",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Name",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "Text",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "LoadBookDataTableEntryByKey",
+                "SourceSection" : "Things_BookDataTable",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcstextfield-6",
+                "TargetSection" : ""
+              }, {
+                "Id" : "9a7d999c-4cf3-4dff-b246-84ed0f7cac63",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "NumberOfPages",
+                  "SourcePropertyBaseType" : "INTEGER",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "Text",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "LoadBookDataTableEntryByKey",
+                "SourceSection" : "Things_BookDataTable",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcstextfield-12",
+                "TargetSection" : ""
+              }, {
+                "Id" : "069539f8-728d-43fe-9bc5-47e4ef7b0cf0",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Price",
+                  "SourcePropertyBaseType" : "NUMBER",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "Text",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "LoadBookDataTableEntryByKey",
+                "SourceSection" : "Things_BookDataTable",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcstextfield-7",
+                "TargetSection" : ""
+              }, {
+                "Id" : "bec46657-941f-4a3a-aa0f-c05fe492fd41",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "PublishingYear",
+                  "SourcePropertyBaseType" : "INTEGER",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "Text",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "LoadBookDataTableEntryByKey",
+                "SourceSection" : "Things_BookDataTable",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcstextfield-10",
+                "TargetSection" : ""
+              }, {
+                "Id" : "505fa730-62ab-46cc-957d-83326c48cab5",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Text",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "values.BookID",
+                  "TargetPropertyBaseType" : "INTEGER",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "UI",
+                "SourceDetails" : "",
+                "SourceId" : "ptcstextfield-14",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "AddOrUpdateBookDataTableEntry",
+                "TargetSection" : "Things_BookDataTable"
+              }, {
+                "Id" : "8876e1e6-98a0-40d4-ba69-da97057b2897",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Text",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "values.Name",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "UI",
+                "SourceDetails" : "",
+                "SourceId" : "ptcstextfield-6",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "AddOrUpdateBookDataTableEntry",
+                "TargetSection" : "Things_BookDataTable"
+              }, {
+                "Id" : "eaf68116-4cfe-43ad-8fdd-56f07e34f1a1",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Text",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "values.ISBN",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "UI",
+                "SourceDetails" : "",
+                "SourceId" : "ptcstextfield-5",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "AddOrUpdateBookDataTableEntry",
+                "TargetSection" : "Things_BookDataTable"
+              }, {
+                "Id" : "8866d986-5652-4698-a8bf-5925ffe5d200",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Text",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "values.Price",
+                  "TargetPropertyBaseType" : "NUMBER",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "UI",
+                "SourceDetails" : "",
+                "SourceId" : "ptcstextfield-7",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "AddOrUpdateBookDataTableEntry",
+                "TargetSection" : "Things_BookDataTable"
+              }, {
+                "Id" : "236064ce-d133-4688-ab9c-d45fd4809bbd",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Text",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "values.PublishingYear",
+                  "TargetPropertyBaseType" : "INTEGER",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "UI",
+                "SourceDetails" : "",
+                "SourceId" : "ptcstextfield-10",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "AddOrUpdateBookDataTableEntry",
+                "TargetSection" : "Things_BookDataTable"
+              }, {
+                "Id" : "e83ba4cb-56a7-48d6-b1e0-accc658c152c",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Text",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "values.NumberOfPages",
+                  "TargetPropertyBaseType" : "INTEGER",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "UI",
+                "SourceDetails" : "",
+                "SourceId" : "ptcstextfield-12",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "AddOrUpdateBookDataTableEntry",
+                "TargetSection" : "Things_BookDataTable"
+              }, {
+                "Id" : "5a019dae-e286-4527-956e-82392097a228",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "InfoTable",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetDataTableEntries",
+                "SourceName" : "GetDataTableEntries",
+                "SourceSection" : "Things_PublisherDataTable",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcsdropdown-11",
+                "TargetSection" : ""
+              }, {
+                "Id" : "c7f4a992-e8fd-4800-97e1-4de68c6f88e7",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "SelectedText",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "property",
+                  "TargetProperty" : "values.PublisherID",
+                  "TargetPropertyBaseType" : "INTEGER",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "ptcsdropdown-11",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "AddOrUpdateBookDataTableEntry",
+                "TargetSection" : "Things_BookDataTable"
+              }, {
+                "Id" : "9002d42d-f5b2-4094-8ef9-55d598035ef2",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "PublisherID",
+                  "SourcePropertyBaseType" : "INTEGER",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "SelectedText",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "LoadBookDataTableEntryByKey",
+                "SourceSection" : "Things_BookDataTable",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcsdropdown-11",
+                "TargetSection" : ""
+              }, {
+                "Id" : "4f2fd509-cf47-42d6-94b4-f685e88608d2",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "InfoTable",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetDataTableEntries",
+                "SourceSection" : "Things_CategoryDataTable",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcsdropdown-23",
+                "TargetSection" : ""
+              }, {
+                "Id" : "4c747f78-3981-4da8-b813-2e3e8dcde5a8",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "InfoTable",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "LoadAuthorsWithFullName",
+                "SourceSection" : "Things_AuthorDataTable",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcsdropdown-22",
+                "TargetSection" : ""
+              }, {
+                "Id" : "4833b62d-f54a-4d3f-8062-031548fb9c75",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Categories",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "SelectedItems",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "LoadBookDataTableEntryByKey",
+                "SourceSection" : "Things_BookDataTable",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcsdropdown-23",
+                "TargetSection" : ""
+              }, {
+                "Id" : "55636afe-51a3-49df-b1d7-f1a7f48d555d",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Authors",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "SelectedItems",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "LoadBookDataTableEntryByKey",
+                "SourceSection" : "Things_BookDataTable",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcsdropdown-22",
+                "TargetSection" : ""
+              }, {
+                "Id" : "74a05197-6a7b-47af-af8c-e19f3de39320",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "SelectedItems",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "values.Categories",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "UI",
+                "SourceDetails" : "",
+                "SourceId" : "ptcsdropdown-23",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "AddOrUpdateBookDataTableEntry",
+                "TargetSection" : "Things_BookDataTable"
+              }, {
+                "Id" : "0a4bf98e-f5e9-4b08-a631-0d1ecee5cc4a",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "SelectedItems",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "values.Authors",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "UI",
+                "SourceDetails" : "",
+                "SourceId" : "ptcsdropdown-22",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "AddOrUpdateBookDataTableEntry",
+                "TargetSection" : "Things_BookDataTable"
+              }, {
+                "Id" : "1081320a-b45c-4d59-be45-65d457f00bec",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Text",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "values.Description",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "UI",
+                "SourceDetails" : "",
+                "SourceId" : "ptcstextarea-35",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "AddOrUpdateBookDataTableEntry",
+                "TargetSection" : "Things_BookDataTable"
+              }, {
+                "Id" : "cbf7e8bf-c64b-4b17-8120-4c14f5845e4d",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Image",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "SourceURL",
+                  "TargetPropertyBaseType" : "IMAGELINK",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "LoadBookDataTableEntryByKey",
+                "SourceSection" : "Things_BookDataTable",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcsimage-62",
+                "TargetSection" : ""
+              }, {
+                "Id" : "883bb5c4-3391-47cb-a9ac-53bc3f11ba50",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "FileName",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "filePath",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "UI",
+                "SourceDetails" : "",
+                "SourceId" : "fileuploadext-70",
+                "SourceSection" : "",
+                "TargetArea" : "UI",
+                "TargetId" : "validator-71",
+                "TargetSection" : ""
+              }, {
+                "Id" : "21538b8b-5e7c-43bd-ad24-0f465a7807c9",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "FileName",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "values.NewImage",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "UI",
+                "SourceDetails" : "",
+                "SourceId" : "fileuploadext-70",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "AddOrUpdateBookDataTableEntry",
+                "TargetSection" : "Things_BookDataTable"
+              }, {
+                "Id" : "80ed5ac1-4def-4446-8f50-f58d802bcc8a",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Text",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "values.Image",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "UI",
+                "SourceDetails" : "",
+                "SourceId" : "ptcstextfield-9",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "AddOrUpdateBookDataTableEntry",
+                "TargetSection" : "Things_BookDataTable"
+              }, {
+                "Id" : "e2f26276-2bfc-4904-a2d7-e46db91b567b",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "bookID",
+                  "SourcePropertyBaseType" : "INTEGER",
+                  "SourcePropertyType" : "property",
+                  "TargetProperty" : "bookID",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "UI",
+                "TargetId" : "validator-72",
+                "TargetSection" : ""
+              }, {
+                "Id" : "09474289-2555-4949-9b50-e315cfc92a41",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "FileName",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "fileName",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "UI",
+                "SourceDetails" : "",
+                "SourceId" : "fileuploadext-70",
+                "SourceSection" : "",
+                "TargetArea" : "UI",
+                "TargetId" : "validator-74",
+                "TargetSection" : ""
+              } ],
+              "DesignTimePermissions" : { },
+              "Events" : [ {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_BookDataTable",
+                "EventHandlerService" : "LoadBookDataTableEntryByKey",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "4e4d17a9-373f-481c-940d-a26261d70510"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_PublisherDataTable",
+                "EventHandlerService" : "GetDataTableEntries",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "a78f4e62-a8da-4763-b2c0-9b590896f5ef"
+              }, {
+                "EventHandlerArea" : "Mashup",
+                "EventHandlerId" : "mashup-root",
+                "EventHandlerService" : "CloseIfPopup",
+                "EventTriggerArea" : "Data",
+                "EventTriggerEvent" : "ServiceInvokeCompleted",
+                "EventTriggerId" : "AddOrUpdateBookDataTableEntry",
+                "EventTriggerSection" : "Things_BookDataTable",
+                "Id" : "475d37f3-c907-43c8-899c-e3ecfdd4ff9a"
+              }, {
+                "EventHandlerArea" : "Mashup",
+                "EventHandlerId" : "mashup-root",
+                "EventHandlerService" : "CloseIfPopup",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "Clicked",
+                "EventTriggerId" : "ptcsbutton-16",
+                "EventTriggerSection" : "",
+                "Id" : "fdff05d8-f379-4c22-b3a3-b8aa6ed9f047"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_AuthorDataTable",
+                "EventHandlerService" : "LoadAuthorsWithFullName",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "a0da783a-f605-4f7e-bc50-d18fd956274f"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_CategoryDataTable",
+                "EventHandlerService" : "GetDataTableEntries",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "89a7ffb4-753b-4c9c-9338-0653714ce7f3"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_BookDataTable",
+                "EventHandlerService" : "AddOrUpdateBookDataTableEntry",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "UploadComplete",
+                "EventTriggerId" : "fileuploadext-70",
+                "EventTriggerSection" : "",
+                "Id" : "c9cff555-5d7b-4056-8c80-21ccfe018a43"
+              }, {
+                "EventHandlerArea" : "UI",
+                "EventHandlerId" : "fileuploadext-70",
+                "EventHandlerService" : "StartUpload",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "True",
+                "EventTriggerId" : "validator-71",
+                "EventTriggerSection" : "",
+                "Id" : "5565d286-3ca4-4d52-bcf8-40d46b9766ed"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_BookDataTable",
+                "EventHandlerService" : "AddOrUpdateBookDataTableEntry",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "False",
+                "EventTriggerId" : "validator-71",
+                "EventTriggerSection" : "",
+                "Id" : "98ec1c47-a553-445b-8dec-86d85e6a1ced"
+              }, {
+                "EventHandlerArea" : "UI",
+                "EventHandlerId" : "validator-72",
+                "EventHandlerService" : "Evaluate",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "Clicked",
+                "EventTriggerId" : "ptcsbutton-17",
+                "EventTriggerSection" : "",
+                "Id" : "b0b1e459-f69e-490c-830b-c7076f3bea90"
+              }, {
+                "EventHandlerArea" : "UI",
+                "EventHandlerId" : "validator-71",
+                "EventHandlerService" : "Evaluate",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "False",
+                "EventTriggerId" : "validator-72",
+                "EventTriggerSection" : "",
+                "Id" : "8e3659c4-45be-455f-9afe-29c4931eb7e6"
+              }, {
+                "EventHandlerArea" : "UI",
+                "EventHandlerId" : "validator-74",
+                "EventHandlerService" : "Evaluate",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "True",
+                "EventTriggerId" : "validator-72",
+                "EventTriggerSection" : "",
+                "Id" : "17a71e75-2227-441b-a823-93d67dd5990e"
+              }, {
+                "EventHandlerArea" : "UI",
+                "EventHandlerId" : "statusmessage-75",
+                "EventHandlerService" : "ShowMessage",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "False",
+                "EventTriggerId" : "validator-74",
+                "EventTriggerSection" : "",
+                "Id" : "376d616b-a733-4b76-b21c-59628fcecc52"
+              }, {
+                "EventHandlerArea" : "UI",
+                "EventHandlerId" : "fileuploadext-70",
+                "EventHandlerService" : "StartUpload",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "True",
+                "EventTriggerId" : "validator-74",
+                "EventTriggerSection" : "",
+                "Id" : "1144cc51-10d0-4735-9593-e7542d497640"
+              } ],
+              "RunTimePermissions" : { },
+              "UI" : {
+                "Properties" : {
+                  "AddToDashboardButton" : "SimplePlus",
+                  "AddToDashboardButtonStyle" : "DefaultAddToDashboardButtonStyle",
+                  "Area" : "Mashup",
+                  "BGImage" : "",
+                  "BGImageRepeat" : "no-repeat",
+                  "BGImageSize" : "auto",
+                  "Columns" : 0,
+                  "ConfigureGadgetButton" : "SimpleGear",
+                  "ConfigureGadgetButtonStyle" : "DefaultConfigureGadgetButtonStyle",
+                  "DisplayName" : "Mashup",
+                  "EnableParameterEditing" : false,
+                  "Height" : 618,
+                  "Id" : "mashup-root",
+                  "IgnoreWarningsInViewMashup" : false,
+                  "IsPrintLayout" : false,
+                  "Left" : 0,
+                  "MashupResolution" : "FHD 1920x1080",
+                  "MashupToEditGadget" : "DefaultMashupToEditGadget",
+                  "MinHeight" : 0,
+                  "MinWidth" : 0,
+                  "ResponsiveLayout" : true,
+                  "Rows" : 0,
+                  "ShowDataLoading" : true,
+                  "Style" : "DefaultMashupStyle",
+                  "StyleProperties" : {
+                    "data" : {
+                      "flexcontainer-4" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "padding-bottom" : "",
+                              "padding-top" : "20px"
+                            }
+                          }
+                        },
+                        "widget" : "flex-container"
+                      }
+                    },
+                    "meta" : {
+                      "type" : "WidgetStyler",
+                      "version" : "1.0"
+                    }
+                  },
+                  "StyleTheme" : "PTC Convergence Theme",
+                  "Title" : "",
+                  "TitleBar" : false,
+                  "TitleBarStyle" : "DefaultTitleBarStyle",
+                  "TitleBarText" : "Gadget Title Here",
+                  "Top" : 0,
+                  "Type" : "mashup",
+                  "UseMasterTheme" : false,
+                  "UseTheme" : false,
+                  "UseThemeForHybrids" : false,
+                  "Visible" : true,
+                  "Width" : 1024,
+                  "Z-index" : 10,
+                  "__TypeDisplayName" : "Mashup",
+                  "_currentParameterDefs" : [ {
+                    "Aspects" : {
+                      "bindingDirection" : "BOTH",
+                      "isMandatory" : false
+                    },
+                    "BaseType" : "INTEGER",
+                    "Description" : "",
+                    "ParameterName" : "bookID"
+                  } ],
+                  "id_index" : 75,
+                  "supportsAutoResize" : true
+                },
+                "Widgets" : [ {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "DisplayName" : "container-2",
+                    "EnableExpandCollapse" : false,
+                    "ExpandCollapseTabLocation" : "inside",
+                    "Expanded" : true,
+                    "Id" : "flexcontainer-2",
+                    "LastContainer" : true,
+                    "Overlay" : false,
+                    "ResponsiveLayout" : true,
+                    "ShowDataLoading" : true,
+                    "ShowExpandCollapseTab" : false,
+                    "SourceURL" : "",
+                    "Style" : "DefaultContainerStyle",
+                    "StyleProperties" : { },
+                    "Type" : "flexcontainer",
+                    "UseTheme" : true,
+                    "Visible" : true,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Responsive Container",
+                    "align-content" : "flex-start",
+                    "align-items" : "center",
+                    "flex-basis" : "auto",
+                    "flex-direction" : "column",
+                    "flex-grow" : 1,
+                    "flex-max-height" : "",
+                    "flex-max-width" : "",
+                    "flex-min-height" : "",
+                    "flex-min-width" : "",
+                    "flex-shrink" : 1,
+                    "flex-size" : "default",
+                    "flex-wrap" : "nowrap",
+                    "iconClass" : "widgets-flexcontainer",
+                    "justify-content" : "flex-start",
+                    "positioning" : "responsive",
+                    "userCannotRemove" : true
+                  },
+                  "Widgets" : [ {
+                    "Properties" : {
+                      "Area" : "UI",
+                      "DisplayName" : "container-4",
+                      "EnableExpandCollapse" : false,
+                      "ExpandCollapseTabLocation" : "inside",
+                      "Expanded" : true,
+                      "Id" : "flexcontainer-4",
+                      "LastContainer" : false,
+                      "Overlay" : false,
+                      "ResponsiveLayout" : false,
+                      "ShowDataLoading" : true,
+                      "ShowExpandCollapseTab" : false,
+                      "SourceURL" : "",
+                      "Style" : "DefaultContainerStyle",
+                      "StyleProperties" : { },
+                      "Type" : "flexcontainer",
+                      "UseTheme" : true,
+                      "Visible" : true,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Responsive Container",
+                      "align-content" : "flex-start",
+                      "align-items" : "center",
+                      "flex-basis" : "auto",
+                      "flex-direction" : "row",
+                      "flex-grow" : 0,
+                      "flex-max-height" : "",
+                      "flex-max-width" : "",
+                      "flex-min-height" : "",
+                      "flex-min-width" : "",
+                      "flex-shrink" : 1,
+                      "flex-size" : "default",
+                      "flex-wrap" : "nowrap",
+                      "iconClass" : "widgets-flexcontainer",
+                      "isLocked" : false,
+                      "justify-content" : "flex-start",
+                      "positioning" : "responsive",
+                      "userCannotRemove" : false
+                    },
+                    "Widgets" : [ {
+                      "Properties" : {
+                        "Area" : "UI",
+                        "DisplayName" : "container-34",
+                        "EnableExpandCollapse" : false,
+                        "ExpandCollapseTabLocation" : "inside",
+                        "Expanded" : true,
+                        "Id" : "flexcontainer-34",
+                        "LastContainer" : false,
+                        "Overlay" : false,
+                        "ResponsiveLayout" : false,
+                        "ShowDataLoading" : true,
+                        "ShowExpandCollapseTab" : false,
+                        "SourceURL" : "",
+                        "Style" : "DefaultContainerStyle",
+                        "StyleProperties" : { },
+                        "Type" : "flexcontainer",
+                        "UseTheme" : true,
+                        "Visible" : true,
+                        "Z-index" : 10,
+                        "__TypeDisplayName" : "Responsive Container",
+                        "align-content" : "flex-start",
+                        "align-items" : "flex-end",
+                        "flex-basis" : "auto",
+                        "flex-direction" : "column",
+                        "flex-grow" : 1,
+                        "flex-max-height" : "",
+                        "flex-max-width" : "",
+                        "flex-min-height" : "",
+                        "flex-min-width" : "",
+                        "flex-shrink" : 1,
+                        "flex-size" : "default",
+                        "flex-wrap" : "nowrap",
+                        "iconClass" : "widgets-flexcontainer",
+                        "isLocked" : false,
+                        "justify-content" : "flex-end",
+                        "positioning" : "responsive",
+                        "userCannotRemove" : false
+                      },
+                      "Widgets" : [ {
+                        "Properties" : {
+                          "Area" : "UI",
+                          "Counter" : false,
+                          "Disabled" : false,
+                          "DisplayName" : "ptcs-textfield-14",
+                          "Id" : "ptcstextfield-14",
+                          "Label" : "BookID",
+                          "LabelAlignment" : "left",
+                          "LastContainer" : false,
+                          "Left" : 179,
+                          "Margin" : "5",
+                          "MaxNumberOfCharacters" : 100,
+                          "Password" : false,
+                          "ReadOnly" : false,
+                          "ResponsiveLayout" : false,
+                          "ShowClearText" : true,
+                          "ShowDataLoading" : true,
+                          "TabSequence" : 0,
+                          "TextAlignment" : "left",
+                          "Top" : 36,
+                          "Type" : "ptcstextfield",
+                          "UseTheme" : true,
+                          "Visible" : false,
+                          "Width" : 273,
+                          "Z-index" : 10,
+                          "__TypeDisplayName" : "Text Field"
+                        },
+                        "Widgets" : [ ]
+                      }, {
+                        "Properties" : {
+                          "Area" : "UI",
+                          "Counter" : false,
+                          "Disabled" : false,
+                          "DisplayName" : "ptcs-textfield-6",
+                          "Id" : "ptcstextfield-6",
+                          "Label" : "Name",
+                          "LabelAlignment" : "left",
+                          "LastContainer" : false,
+                          "Left" : 179,
+                          "Margin" : "5",
+                          "MaxNumberOfCharacters" : 100,
+                          "Password" : false,
+                          "ReadOnly" : false,
+                          "ResponsiveLayout" : false,
+                          "ShowClearText" : true,
+                          "ShowDataLoading" : true,
+                          "TabSequence" : 0,
+                          "TextAlignment" : "left",
+                          "Top" : 36,
+                          "Type" : "ptcstextfield",
+                          "UseTheme" : true,
+                          "Visible" : true,
+                          "Width" : 273,
+                          "Z-index" : 10,
+                          "__TypeDisplayName" : "Text Field"
+                        },
+                        "Widgets" : [ ]
+                      }, {
+                        "Properties" : {
+                          "Area" : "UI",
+                          "Counter" : false,
+                          "Disabled" : false,
+                          "DisplayName" : "ptcs-textfield-5",
+                          "Id" : "ptcstextfield-5",
+                          "Label" : "ISBN",
+                          "LabelAlignment" : "left",
+                          "LastContainer" : false,
+                          "Left" : 179,
+                          "Margin" : "5",
+                          "MaxNumberOfCharacters" : 100,
+                          "Password" : false,
+                          "ReadOnly" : false,
+                          "ResponsiveLayout" : false,
+                          "ShowClearText" : true,
+                          "ShowDataLoading" : true,
+                          "TabSequence" : 0,
+                          "TextAlignment" : "left",
+                          "Top" : 36,
+                          "Type" : "ptcstextfield",
+                          "UseTheme" : true,
+                          "Visible" : true,
+                          "Width" : 273,
+                          "Z-index" : 10,
+                          "__TypeDisplayName" : "Text Field"
+                        },
+                        "Widgets" : [ ]
+                      }, {
+                        "Properties" : {
+                          "Area" : "UI",
+                          "Counter" : false,
+                          "Disabled" : false,
+                          "DisplayName" : "ptcs-textfield-7",
+                          "Id" : "ptcstextfield-7",
+                          "Label" : "Price",
+                          "LabelAlignment" : "left",
+                          "LastContainer" : false,
+                          "Left" : 179,
+                          "Margin" : "5",
+                          "MaxNumberOfCharacters" : 100,
+                          "Password" : false,
+                          "ReadOnly" : false,
+                          "ResponsiveLayout" : false,
+                          "ShowClearText" : true,
+                          "ShowDataLoading" : true,
+                          "TabSequence" : 0,
+                          "TextAlignment" : "left",
+                          "Top" : 36,
+                          "Type" : "ptcstextfield",
+                          "UseTheme" : true,
+                          "Visible" : true,
+                          "Width" : 273,
+                          "Z-index" : 10,
+                          "__TypeDisplayName" : "Text Field"
+                        },
+                        "Widgets" : [ ]
+                      }, {
+                        "Properties" : {
+                          "Area" : "UI",
+                          "Counter" : false,
+                          "Disabled" : false,
+                          "DisplayName" : "ptcs-textfield-9",
+                          "Id" : "ptcstextfield-9",
+                          "Label" : "Image",
+                          "LabelAlignment" : "left",
+                          "LastContainer" : false,
+                          "Left" : 179,
+                          "Margin" : "5",
+                          "MaxNumberOfCharacters" : 100,
+                          "Password" : false,
+                          "ReadOnly" : false,
+                          "ResponsiveLayout" : false,
+                          "ShowClearText" : true,
+                          "ShowDataLoading" : true,
+                          "TabSequence" : 0,
+                          "TextAlignment" : "left",
+                          "Top" : 36,
+                          "Type" : "ptcstextfield",
+                          "UseTheme" : true,
+                          "Visible" : false,
+                          "Width" : 273,
+                          "Z-index" : 10,
+                          "__TypeDisplayName" : "Text Field"
+                        },
+                        "Widgets" : [ ]
+                      }, {
+                        "Properties" : {
+                          "Area" : "UI",
+                          "Counter" : false,
+                          "Disabled" : false,
+                          "DisplayName" : "ptcs-textfield-10",
+                          "Id" : "ptcstextfield-10",
+                          "Label" : "Publishing year",
+                          "LabelAlignment" : "left",
+                          "LastContainer" : false,
+                          "Left" : 179,
+                          "Margin" : "5",
+                          "MaxNumberOfCharacters" : 100,
+                          "Password" : false,
+                          "ReadOnly" : false,
+                          "ResponsiveLayout" : false,
+                          "ShowClearText" : true,
+                          "ShowDataLoading" : true,
+                          "TabSequence" : 0,
+                          "TextAlignment" : "left",
+                          "Top" : 36,
+                          "Type" : "ptcstextfield",
+                          "UseTheme" : true,
+                          "Visible" : true,
+                          "Width" : 273,
+                          "Z-index" : 10,
+                          "__TypeDisplayName" : "Text Field"
+                        },
+                        "Widgets" : [ ]
+                      }, {
+                        "Properties" : {
+                          "Area" : "UI",
+                          "Counter" : false,
+                          "Disabled" : false,
+                          "DisplayName" : "ptcs-textfield-12",
+                          "Id" : "ptcstextfield-12",
+                          "Label" : "Number of pages",
+                          "LabelAlignment" : "left",
+                          "LastContainer" : false,
+                          "Left" : 179,
+                          "Margin" : "5",
+                          "MaxNumberOfCharacters" : 100,
+                          "Password" : false,
+                          "ReadOnly" : false,
+                          "ResponsiveLayout" : false,
+                          "ShowClearText" : true,
+                          "ShowDataLoading" : true,
+                          "TabSequence" : 0,
+                          "TextAlignment" : "left",
+                          "Top" : 36,
+                          "Type" : "ptcstextfield",
+                          "UseTheme" : true,
+                          "Visible" : true,
+                          "Width" : 273,
+                          "Z-index" : 10,
+                          "__TypeDisplayName" : "Text Field"
+                        },
+                        "Widgets" : [ ]
+                      }, {
+                        "Properties" : {
+                          "AlternateText" : "",
+                          "Area" : "UI",
+                          "DisplayName" : "ptcs-image-62",
+                          "Height" : 68,
+                          "Id" : "ptcsimage-62",
+                          "LastContainer" : false,
+                          "Left" : 594,
+                          "Margin" : "5",
+                          "Position" : "center",
+                          "PreventCaching" : true,
+                          "ResponsiveLayout" : false,
+                          "Scaling" : "contain",
+                          "ShowDataLoading" : true,
+                          "Top" : 56,
+                          "Type" : "ptcsimage",
+                          "UseTheme" : true,
+                          "Visible" : true,
+                          "Width" : 68,
+                          "Z-index" : 10,
+                          "__TypeDisplayName" : "Image"
+                        },
+                        "Widgets" : [ ]
+                      } ]
+                    }, {
+                      "Properties" : {
+                        "Area" : "UI",
+                        "DisplayName" : "container-33",
+                        "EnableExpandCollapse" : false,
+                        "ExpandCollapseTabLocation" : "inside",
+                        "Expanded" : true,
+                        "Id" : "flexcontainer-33",
+                        "LastContainer" : false,
+                        "Overlay" : false,
+                        "ResponsiveLayout" : false,
+                        "ShowDataLoading" : true,
+                        "ShowExpandCollapseTab" : false,
+                        "SourceURL" : "",
+                        "Style" : "DefaultContainerStyle",
+                        "StyleProperties" : { },
+                        "Type" : "flexcontainer",
+                        "UseTheme" : true,
+                        "Visible" : true,
+                        "Z-index" : 10,
+                        "__TypeDisplayName" : "Responsive Container",
+                        "align-content" : "flex-start",
+                        "align-items" : "flex-start",
+                        "flex-basis" : "auto",
+                        "flex-direction" : "column",
+                        "flex-grow" : 1,
+                        "flex-max-height" : "",
+                        "flex-max-width" : "",
+                        "flex-min-height" : "",
+                        "flex-min-width" : "",
+                        "flex-shrink" : 1,
+                        "flex-size" : "default",
+                        "flex-wrap" : "nowrap",
+                        "iconClass" : "widgets-flexcontainer",
+                        "isLocked" : false,
+                        "justify-content" : "flex-start",
+                        "positioning" : "responsive",
+                        "userCannotRemove" : false
+                      },
+                      "Widgets" : [ {
+                        "Properties" : {
+                          "Area" : "UI",
+                          "Counter" : false,
+                          "Disabled" : false,
+                          "DisplayName" : "ptcs-textarea-35",
+                          "Id" : "ptcstextarea-35",
+                          "Label" : "Description",
+                          "LabelAlignment" : "left",
+                          "LastContainer" : false,
+                          "Left" : 69,
+                          "Margin" : "5",
+                          "MaxNumberOfCharacters" : 1000000,
+                          "ReadOnly" : false,
+                          "ResponsiveLayout" : false,
+                          "ShowDataLoading" : true,
+                          "TabSequence" : 0,
+                          "TextAlignment" : "left",
+                          "Top" : 6,
+                          "Type" : "ptcstextarea",
+                          "UseTheme" : true,
+                          "Visible" : true,
+                          "Width" : 273,
+                          "Z-index" : 10,
+                          "__TypeDisplayName" : "Text Area"
+                        },
+                        "Widgets" : [ ]
+                      }, {
+                        "Properties" : {
+                          "Alignment" : "left",
+                          "AllLabel" : "[[all]]",
+                          "Area" : "UI",
+                          "AutoSelectFirstRow" : false,
+                          "ClearSelectedItemsLabel" : "[[clearSelectedItems]]",
+                          "ClearSelectionItem" : true,
+                          "ClearSelectionLabel" : "(None)",
+                          "Disabled" : false,
+                          "DisplayField" : "Name",
+                          "DisplayFieldBaseType" : "STRING",
+                          "DisplayName" : "ptcs-dropdown-11",
+                          "FilterHintText" : "Filter",
+                          "HintText" : "Select...",
+                          "Id" : "ptcsdropdown-11",
+                          "ItemMeta" : {
+                            "type" : "text"
+                          },
+                          "Label" : "Publisher",
+                          "LabelAlignment" : "left",
+                          "LastContainer" : false,
+                          "Left" : 209,
+                          "ListFormat_StateParameters" : [ ],
+                          "Margin" : "5",
+                          "MultiSelect" : false,
+                          "ResponsiveLayout" : false,
+                          "RowHeight" : 34,
+                          "SelectAllLabel" : "[[selectAll]]",
+                          "SelectedLabel" : "[[selected]]",
+                          "ShowDataLoading" : true,
+                          "ShowListFilter" : false,
+                          "TabSequence" : 0,
+                          "Top" : 126,
+                          "Type" : "ptcsdropdown",
+                          "UseTheme" : true,
+                          "ValueField" : "PublisherID",
+                          "Visible" : true,
+                          "Width" : 273,
+                          "Z-index" : 10,
+                          "__TypeDisplayName" : "DropDown"
+                        },
+                        "Widgets" : [ ]
+                      }, {
+                        "Properties" : {
+                          "Alignment" : "left",
+                          "AllLabel" : "[[all]]",
+                          "Area" : "UI",
+                          "AutoSelectFirstRow" : false,
+                          "ClearSelectedItemsLabel" : "[[clearSelectedItems]]",
+                          "ClearSelectionItem" : false,
+                          "ClearSelectionLabel" : "(None)",
+                          "Disabled" : false,
+                          "DisplayField" : "FullName",
+                          "DisplayFieldBaseType" : "STRING",
+                          "DisplayName" : "ptcs-dropdown-22",
+                          "FilterHintText" : "Filter",
+                          "HintText" : "",
+                          "Id" : "ptcsdropdown-22",
+                          "ItemMeta" : {
+                            "type" : "text"
+                          },
+                          "Label" : "Authors",
+                          "LabelAlignment" : "left",
+                          "LastContainer" : false,
+                          "Left" : 129,
+                          "ListFormat_StateParameters" : [ ],
+                          "Margin" : "5",
+                          "MultiSelect" : true,
+                          "ResponsiveLayout" : false,
+                          "RowHeight" : 34,
+                          "SelectAllLabel" : "[[selectAll]]",
+                          "SelectedLabel" : "[[selected]]",
+                          "ShowDataLoading" : true,
+                          "ShowListFilter" : true,
+                          "TabSequence" : 0,
+                          "Top" : 622.7999877929688,
+                          "Type" : "ptcsdropdown",
+                          "UseTheme" : true,
+                          "ValueField" : "AuthorID",
+                          "Visible" : true,
+                          "Width" : 273,
+                          "Z-index" : 10,
+                          "__TypeDisplayName" : "DropDown"
+                        },
+                        "Widgets" : [ ]
+                      }, {
+                        "Properties" : {
+                          "Alignment" : "left",
+                          "AllLabel" : "[[all]]",
+                          "Area" : "UI",
+                          "AutoSelectFirstRow" : false,
+                          "ClearSelectedItemsLabel" : "[[clearSelectedItems]]",
+                          "ClearSelectionItem" : false,
+                          "ClearSelectionLabel" : "(None)",
+                          "Disabled" : false,
+                          "DisplayField" : "Name",
+                          "DisplayFieldBaseType" : "STRING",
+                          "DisplayName" : "ptcs-dropdown-23",
+                          "FilterHintText" : "Filter",
+                          "HintText" : "",
+                          "Id" : "ptcsdropdown-23",
+                          "ItemMeta" : {
+                            "type" : "text"
+                          },
+                          "Label" : "Categories",
+                          "LabelAlignment" : "left",
+                          "LastContainer" : false,
+                          "Left" : 129,
+                          "ListFormat_StateParameters" : [ ],
+                          "Margin" : "5",
+                          "MultiSelect" : true,
+                          "ResponsiveLayout" : false,
+                          "RowHeight" : 34,
+                          "SelectAllLabel" : "[[selectAll]]",
+                          "SelectedLabel" : "[[selected]]",
+                          "ShowDataLoading" : true,
+                          "ShowListFilter" : true,
+                          "TabSequence" : 0,
+                          "Top" : 622.7999877929688,
+                          "Type" : "ptcsdropdown",
+                          "UseTheme" : true,
+                          "ValueField" : "CategoryID",
+                          "Visible" : true,
+                          "Width" : 273,
+                          "Z-index" : 10,
+                          "__TypeDisplayName" : "DropDown"
+                        },
+                        "Widgets" : [ ]
+                      }, {
+                        "Properties" : {
+                          "Area" : "UI",
+                          "DisclosureControl" : "show-more",
+                          "DisplayName" : "ptcs-label-69",
+                          "HorizontalAlignment" : "left",
+                          "Id" : "ptcslabel-69",
+                          "LabelText" : "Upload new image",
+                          "LabelType" : "label",
+                          "LastContainer" : false,
+                          "Left" : 74,
+                          "Margin" : "5",
+                          "MultiLine" : true,
+                          "ResponsiveLayout" : false,
+                          "ShowDataLoading" : true,
+                          "Top" : 146,
+                          "Type" : "ptcslabel",
+                          "UseTheme" : true,
+                          "VerticalAlignment" : "flex-start",
+                          "Visible" : true,
+                          "Z-index" : 10,
+                          "__TypeDisplayName" : "Label",
+                          "overflowShowLessTxt" : "[[showLess]]",
+                          "overflowShowMoreTxt" : "[[showMore]]"
+                        },
+                        "Widgets" : [ ]
+                      }, {
+                        "Properties" : {
+                          "Area" : "UI",
+                          "DisplayName" : "fileuploadext-70",
+                          "DisplayPathTextBox" : false,
+                          "DisplayRepositorySelector" : false,
+                          "DisplayUploadButton" : false,
+                          "FileName" : "",
+                          "FocusStyle" : "DefaultButtonFocusStyle",
+                          "FullPath" : "",
+                          "Height" : 40,
+                          "Id" : "fileuploadext-70",
+                          "LastContainer" : false,
+                          "Left" : 69,
+                          "Margin" : "0",
+                          "Path" : "/",
+                          "RepositoryName" : "BookImagesRepository",
+                          "RepositoryStyle" : "DefaultRepositoryStyle",
+                          "ResponsiveLayout" : false,
+                          "ShowDataLoading" : true,
+                          "Style" : "DefaultFileUploadStyle",
+                          "TabSequence" : 0,
+                          "Top" : 176,
+                          "Type" : "fileuploadext",
+                          "Visible" : true,
+                          "Width" : 200,
+                          "Z-index" : 10,
+                          "__TypeDisplayName" : "File Upload Extended"
+                        },
+                        "Widgets" : [ ]
+                      } ]
+                    } ]
+                  }, {
+                    "Properties" : {
+                      "Area" : "UI",
+                      "DisplayName" : "container-3",
+                      "EnableExpandCollapse" : false,
+                      "ExpandCollapseTabLocation" : "inside",
+                      "Expanded" : true,
+                      "Id" : "flexcontainer-3",
+                      "LastContainer" : false,
+                      "Overlay" : false,
+                      "ResponsiveLayout" : false,
+                      "ShowDataLoading" : true,
+                      "ShowExpandCollapseTab" : false,
+                      "SourceURL" : "",
+                      "Style" : "DefaultContainerStyle",
+                      "StyleProperties" : { },
+                      "Type" : "flexcontainer",
+                      "UseTheme" : true,
+                      "Visible" : true,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Responsive Container",
+                      "align-content" : "flex-start",
+                      "align-items" : "flex-end",
+                      "flex-basis" : "auto",
+                      "flex-direction" : "row",
+                      "flex-grow" : 0,
+                      "flex-max-height" : "",
+                      "flex-max-width" : "",
+                      "flex-min-height" : "",
+                      "flex-min-width" : "",
+                      "flex-shrink" : 1,
+                      "flex-size" : "default",
+                      "flex-wrap" : "nowrap",
+                      "iconClass" : "widgets-flexcontainer",
+                      "isLocked" : false,
+                      "justify-content" : "flex-end",
+                      "positioning" : "responsive",
+                      "userCannotRemove" : false
+                    },
+                    "Widgets" : [ {
+                      "Properties" : {
+                        "Area" : "UI",
+                        "ButtonType" : "primary",
+                        "ContextID" : "",
+                        "Disabled" : false,
+                        "DisplayName" : "ptcs-button-16",
+                        "Id" : "ptcsbutton-16",
+                        "Label" : "Cancel",
+                        "LabelAlignment" : "center",
+                        "LastContainer" : false,
+                        "Left" : 164,
+                        "Margin" : "5",
+                        "ResponsiveLayout" : false,
+                        "ShowDataLoading" : true,
+                        "TabSequence" : 0,
+                        "Top" : 66,
+                        "Type" : "ptcsbutton",
+                        "UseTheme" : true,
+                        "Visible" : true,
+                        "Z-index" : 10,
+                        "__TypeDisplayName" : "Button"
+                      },
+                      "Widgets" : [ ]
+                    }, {
+                      "Properties" : {
+                        "Area" : "UI",
+                        "ButtonType" : "primary",
+                        "ContextID" : "",
+                        "Disabled" : false,
+                        "DisplayName" : "ptcs-button-17",
+                        "Id" : "ptcsbutton-17",
+                        "Label" : "Submit",
+                        "LabelAlignment" : "center",
+                        "LastContainer" : false,
+                        "Left" : 264,
+                        "Margin" : "5",
+                        "ResponsiveLayout" : false,
+                        "ShowDataLoading" : true,
+                        "TabSequence" : 0,
+                        "Top" : 46,
+                        "Type" : "ptcsbutton",
+                        "UseTheme" : true,
+                        "Visible" : true,
+                        "Z-index" : 10,
+                        "__TypeDisplayName" : "Button"
+                      },
+                      "Widgets" : [ ]
+                    } ]
+                  } ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "AutoEvaluate" : false,
+                    "DisplayName" : "StartUpload",
+                    "Expression" : "filePath != \"\";",
+                    "Height" : 28,
+                    "Id" : "validator-71",
+                    "LastContainer" : false,
+                    "Left" : null,
+                    "Output" : true,
+                    "ResponsiveLayout" : false,
+                    "ShowDataLoading" : true,
+                    "Top" : null,
+                    "Type" : "validator",
+                    "Visible" : true,
+                    "Width" : 200,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Validator",
+                    "_currentParameterDefs" : [ {
+                      "BaseType" : "STRING",
+                      "DefaultValue" : "",
+                      "Description" : "",
+                      "ParameterName" : "filePath",
+                      "bindingDirection" : "Target",
+                      "bindingType" : "Property",
+                      "isBindingSource" : false,
+                      "isBindingTarget" : true,
+                      "shown" : true
+                    } ]
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "AutoEvaluate" : false,
+                    "DisplayName" : "IsFormInAddMode",
+                    "Expression" : "bookID == \"\" || bookID == undefined;",
+                    "Height" : 28,
+                    "Id" : "validator-72",
+                    "LastContainer" : false,
+                    "Left" : null,
+                    "Output" : true,
+                    "ResponsiveLayout" : false,
+                    "ShowDataLoading" : true,
+                    "Top" : null,
+                    "Type" : "validator",
+                    "Visible" : true,
+                    "Width" : 200,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Validator",
+                    "_currentParameterDefs" : [ {
+                      "BaseType" : "STRING",
+                      "Description" : "",
+                      "ParameterName" : "bookID",
+                      "bindingDirection" : "Target",
+                      "bindingType" : "Property",
+                      "isBindingSource" : false,
+                      "isBindingTarget" : true,
+                      "shown" : true
+                    } ]
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "AutoEvaluate" : false,
+                    "DisplayName" : "ImageSelected",
+                    "Expression" : "fileName != \"\";",
+                    "Height" : 28,
+                    "Id" : "validator-74",
+                    "LastContainer" : false,
+                    "Left" : null,
+                    "Output" : true,
+                    "ResponsiveLayout" : false,
+                    "ShowDataLoading" : true,
+                    "Top" : null,
+                    "Type" : "validator",
+                    "Visible" : true,
+                    "Width" : 200,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Validator",
+                    "_currentParameterDefs" : [ {
+                      "BaseType" : "STRING",
+                      "Description" : "",
+                      "ParameterName" : "fileName",
+                      "bindingDirection" : "Target",
+                      "bindingType" : "Property",
+                      "isBindingSource" : false,
+                      "isBindingTarget" : true,
+                      "shown" : true
+                    } ]
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "DisplayName" : "YouMustSelectImageMessage",
+                    "Height" : 28,
+                    "Id" : "statusmessage-75",
+                    "LastContainer" : false,
+                    "Left" : null,
+                    "Message" : "You muse choose image",
+                    "MessageType" : "error",
+                    "ResponsiveLayout" : false,
+                    "ShowDataLoading" : true,
+                    "Top" : null,
+                    "Type" : "statusmessage",
+                    "Visible" : true,
+                    "Width" : 200,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Status Message"
+                  },
+                  "Widgets" : [ ]
+                } ]
+              },
+              "mashupType" : "mashup"
+            }
+            ]]>
+            </mashupContent>
+            <preview></preview>
+        </Mashup>
+    </Mashups>
+</Entities>

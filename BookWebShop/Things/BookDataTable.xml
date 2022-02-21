@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="3"
+ universal="password">
+    <Things>
+        <Thing
+         description=""
+         documentationContent=""
+         effectiveThingPackage="DataTableThing"
+         enabled="true"
+         homeMashup="DataTableEditor"
+         identifier=""
+         inheritedValueStream=""
+         name="BookDataTable"
+         projectName="BookWebShop"
+         published="false"
+         tags=""
+         thingTemplate="DataTable"
+         valueStream="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Data Thing Configuration"
+                 isMultiRow="false"
+                 name="DataThingSettings"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description="Persistence Provider Name"
+                             name="persistenceProvider"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <persistenceProvider>
+                            <![CDATA[
+                            ThingworxPersistenceProvider
+                            ]]>
+                            </persistenceProvider>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Data Shape Configuration"
+                 isMultiRow="false"
+                 name="Settings"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.friendlyName="Data Shape"
+                             baseType="DATASHAPENAME"
+                             description="Data shape"
+                             name="dataShape"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <accumulatedDataShape>
+                                <json>
+                                <![CDATA[
+                                {"fieldDefinitions":{"CategoryID":{"name":"CategoryID","aspects":{"isPrimaryKey":false},"description":"","baseType":"INTEGER","ordinal":1},"Description":{"name":"Description","aspects":{"isPrimaryKey":false},"description":"","baseType":"STRING","ordinal":2},"BookID":{"name":"BookID","aspects":{"isPrimaryKey":true},"description":"","baseType":"INTEGER","ordinal":0},"ISBN":{"name":"ISBN","aspects":{"isPrimaryKey":false},"description":"","baseType":"STRING","ordinal":4},"Price":{"name":"Price","aspects":{"isPrimaryKey":false},"description":"","baseType":"NUMBER","ordinal":7},"PublisherID":{"name":"PublisherID","aspects":{"isPrimaryKey":false},"description":"","baseType":"INTEGER","ordinal":8},"NumberOfPages":{"name":"NumberOfPages","aspects":{"isPrimaryKey":false},"description":"","baseType":"INTEGER","ordinal":6},"Image":{"name":"Image","aspects":{"isPrimaryKey":false},"description":"","baseType":"STRING","ordinal":3},"PublishingYear":{"name":"PublishingYear","aspects":{"isPrimaryKey":false},"description":"","baseType":"INTEGER","ordinal":9},"Name":{"name":"Name","aspects":{"isPrimaryKey":false},"description":"","baseType":"STRING","ordinal":5}}}
+                                ]]>
+                                </json>
+                            </accumulatedDataShape>
+                            <dataShape>
+                            <![CDATA[
+                            Book
+                            ]]>
+                            </dataShape>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Index Settings"
+                 isMultiRow="true"
+                 name="Indexes"
+                 ordinal="1">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.friendlyName="Index Field Names"
+                             baseType="STRING"
+                             description="Index fields"
+                             name="fieldNames"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Index Name"
+                             baseType="STRING"
+                             description="Index name"
+                             name="name"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows></Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+            <ThingShape>
+                <PropertyDefinitions></PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="AddOrUpdateBookDataTableEntry">
+                        <ResultType
+                         baseType="NOTHING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.dataShape="FullBookDataShape"
+                             baseType="INFOTABLE"
+                             description=""
+                             name="values"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="DeleteBookEntryByID">
+                        <ResultType
+                         baseType="NOTHING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="INTEGER"
+                             description=""
+                             name="bookID"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="LoadBookDataTableEntries">
+                        <ResultType
+                         aspect.dataShape="BookWithPublisherDataShape"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="LoadBookDataTableEntryByKey">
+                        <ResultType
+                         aspect.dataShape="FullBookDataShape"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="INTEGER"
+                             description=""
+                             name="bookID"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions></EventDefinitions>
+                <ServiceMappings></ServiceMappings>
+                <ServiceImplementations>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="AddOrUpdateBookDataTableEntry">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        if(!values.BookID) {
+                                           addNewBook(values);
+                                        } else {
+                                           modifyExistingBook(values);
+                                        }
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        function addNewBook(book) {
+                                            Things["BookImagesRepository"].RenameFile({
+                                        		path: book.NewImage /* STRING */,
+                                        		name: book.Name /* STRING */,
+                                        		overwrite: undefined /* BOOLEAN {"defaultValue":false} */
+                                        	});
+                                            book.Image = book.Name;
+                                            book.BookID = getNextID(); // generate next primary key
+                                            // add entry to BookTable
+                                            me.AddDataTableEntry({
+                                        		tags: undefined /* TAGS */,
+                                        		location: undefined /* LOCATION */,
+                                        		source: undefined /* STRING */,
+                                        		sourceType: undefined /* STRING */,
+                                        		values: book /* INFOTABLE */
+                                        	});
+                                            // add entries to BookAuthorTable
+                                            addBookAuthors(book.BookID, book.Authors);
+                                            addBookCategories(book.BookID, book.Categories);
+                                        }
+                                        
+                                        
+                                        function modifyExistingBook(book) {
+                                            if(book.NewImage) {
+                                                // delete old
+                                                let pathToOldFile = book.Image.split("/").pop();
+                                                Things["BookImagesRepository"].DeleteFile({
+                                        			path: pathToOldFile /* STRING */
+                                        		});
+                                                
+                                                
+                                                Things["BookImagesRepository"].RenameFile({
+                                        			path: book.NewImage /* STRING */,
+                                        			name: book.Name /* STRING */,
+                                        			overwrite: true /* BOOLEAN {"defaultValue":false} */
+                                        		});
+                                            	book.Image = book.Name;
+                                            } else {
+                                                // skinem sve osim filenamea sa slike
+                                                let fileName = book.Image.split("/").pop();
+                                                book.Image = fileName;
+                                            }
+                                        
+                                                
+                                            
+                                            me.UpdateDataTableEntry({
+                                        		sourceType: undefined /* STRING */,
+                                        		values: book /* INFOTABLE */,
+                                        		location: undefined /* LOCATION */,
+                                        		source: undefined /* STRING */,
+                                        		tags: undefined /* TAGS */
+                                        	});
+                                            deleteBookAuthorEntriesByBookID(book.BookID);
+                                            deleteBookCategoryEntriesByBookID(book.BookID);
+                                            addBookAuthors(book.BookID, book.Authors);
+                                            addBookCategories(book.BookID, book.Categories);
+                                        }
+                                        
+                                        
+                                        function getNextID() {
+                                        	let infoTable = me.GetDataTableEntries({maxItems: undefined /* NUMBER {"defaultValue":500} */});
+                                            if(infoTable.getRowCount() == 0) {
+                                                return 1;
+                                            }
+                                        	let params = {
+                                        		sortColumn: "BookID" /* STRING */,
+                                        		t: infoTable /* INFOTABLE */,
+                                        		ascending: false /* BOOLEAN {"defaultValue":true} */
+                                        	};
+                                        	let sortedInfoTable = Resources["InfoTableFunctions"].Sort(params);
+                                            return ++(sortedInfoTable[0].BookID);
+                                        }
+                                        
+                                        
+                                        function addBookAuthors(bookID, authors) {
+                                            let emptyInfoTable = DataShapes["BookAuthor"].CreateValues();
+                                            authors.rows.toArray().forEach(author => {
+                                        		let bookAuthorEntry = {
+                                            		AuthorID: author.AuthorID, 
+                                            		BookID: bookID
+                                        		};
+                                                emptyInfoTable.AddRow(bookAuthorEntry);
+                                            });
+                                            
+                                            Things["BookAuthorDataTable"].AddDataTableEntries({
+                                        		sourceType: undefined /* STRING */,
+                                        		values: emptyInfoTable /* INFOTABLE */,
+                                        		location: undefined /* LOCATION */,
+                                        		source: undefined /* STRING */,
+                                        		tags: undefined /* TAGS */
+                                        	});
+                                        }
+                                        
+                                        function addBookCategories(bookID, categories) {
+                                            let emptyInfoTable = DataShapes["BookCategory"].CreateValues();
+                                            categories.rows.toArray().forEach(category => {
+                                        		let bookCategoryEntry = {
+                                            		CategoryID: category.CategoryID, 
+                                            		BookID: bookID
+                                        		};
+                                                emptyInfoTable.AddRow(bookCategoryEntry);
+                                            });
+                                            
+                                            Things["BookCategoryDataTable"].AddDataTableEntries({
+                                        		sourceType: undefined /* STRING */,
+                                        		values: emptyInfoTable /* INFOTABLE */,
+                                        		location: undefined /* LOCATION */,
+                                        		source: undefined /* STRING */,
+                                        		tags: undefined /* TAGS */
+                                        	});
+                                        }
+                                        
+                                        
+                                        
+                                        function deleteBookAuthorEntriesByBookID(bookID) {
+                                            let infoTable = DataShapes["BookAuthor"].CreateValues();
+                                            infoTable.BookID = bookID;
+                                            let params = {values: infoTable};
+                                            Things["BookAuthorDataTable"].DeleteDataTableEntries(params);
+                                        }
+                                        
+                                        function deleteBookCategoryEntriesByBookID(bookID) {
+                                            let infoTable = DataShapes["BookCategory"].CreateValues();
+                                            infoTable.BookID = bookID;
+                                            let params = {values: infoTable};
+                                            Things["BookCategoryDataTable"].DeleteDataTableEntries(params);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="DeleteBookEntryByID">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        deleteBookImageByBookID(bookID);
+                                        deleteBookByID(bookID);
+                                        deleteBookAuthorEntriesByBookID(bookID);
+                                        deleteBookCategoryEntriesByBookID(bookID);
+                                        
+                                        
+                                        
+                                        function deleteBookByID(bookID) {
+                                            let param = {key: bookID};
+                                            me.DeleteDataTableEntryByKey(param);
+                                        }
+                                        
+                                        
+                                        function deleteBookAuthorEntriesByBookID(bookID) {
+                                            let bookAuthorsToBeDeleted = Things["BookAuthorDataTable"].CreateValues();
+                                            bookAuthorsToBeDeleted.BookID = bookID;
+                                            let params = {values: bookAuthorsToBeDeleted, maxItems: undefined};
+                                            Things["BookAuthorDataTable"].DeleteDataTableEntries(params);
+                                        }
+                                        
+                                        
+                                        function deleteBookCategoryEntriesByBookID(bookID) {
+                                            let bookCategoriesToBeDeleted = Things["BookCategoryDataTable"].CreateValues();
+                                            bookCategoriesToBeDeleted.BookID = bookID;
+                                            let params = {values: bookCategoriesToBeDeleted, maxItems: undefined};
+                                            Things["BookCategoryDataTable"].DeleteDataTableEntries(params);
+                                        }
+                                        
+                                        function deleteBookImageByBookID(bookID) {
+                                            let bookEntry = Things["BookDataTable"].GetDataTableEntryByKey({key: bookID /* STRING */});
+                                            let bookImagePath = bookEntry.Image;
+                                            Things["BookImagesRepository"].DeleteFile({
+                                        		path: bookImagePath /* STRING */
+                                        	});
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="LoadBookDataTableEntries">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let publishersArray = Things["PublisherDataTable"].GetDataTableEntries({maxItems: undefined}).rows.toArray();
+                                        let booksArray = me.GetDataTableEntries({maxItems: undefined}).rows.toArray();
+                                        
+                                        let emptyBookWithPublisherInfoTable = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                            infoTableName: "InfoTable",
+                                            dataShapeName: "BookWithPublisherDataShape"
+                                        });
+                                        
+                                        booksArray.forEach(row => {
+                                            let publisherName = publishersArray.find(x => x.PublisherID == row.PublisherID).Name;
+                                            let newEntry = {
+                                                BookID: row.BookID, // INTEGER
+                                                Name: row.Name, // STRING
+                                                ISBN: row.ISBN, // STRING
+                                                Price: row.Price, // NUMBER
+                                                Image: "https://pp-2111290835z6.portal.ptc.io/Thingworx/FileRepositories/BookImagesRepository/" + row.Image, // STRING
+                                                Description: row.Description, // STRING
+                                                PublishingYear: row.PublishingYear, // STRING
+                                                NumberOfPages: row.NumberOfPages, // STRING
+                                                Publisher: publisherName // STRING
+                                            };
+                                            
+                                            emptyBookWithPublisherInfoTable.AddRow(newEntry);
+                                        });
+                                        
+                                        let result = emptyBookWithPublisherInfoTable;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="LoadBookDataTableEntryByKey">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = DataShapes["FullBookDataShape"].CreateValues();
+                                        if(bookID) {
+                                        	let book = getBookEntryByBookID(bookID); // Infotable(BookDataShape)
+                                            let authors = getAuthorsRelatedToBook(bookID); // Infotable(AuthorFullNameDataShape)
+                                            let categories = getCategoriesRelatedToBook(bookID); // Infotable(CategoryDataShape)
+                                            result = mergeAllData(book, authors, categories);
+                                        }
+                                        
+                                        
+                                        
+                                        function getBookEntryByBookID(bookID) {
+                                            return me.GetDataTableEntryByKey({key: bookID});
+                                        }
+                                        
+                                        // 
+                                        function getAuthorsRelatedToBook(bookID) {
+                                            // create empty info table
+                                            let authorsWithFullNames = DataShapes["AuthorFullNameDataShape"].CreateValues();
+                                            let bookAuthorEntries = Things["BookAuthorDataTable"].GetDataTableEntries({maxItems: undefined});
+                                            let filter = {t: bookAuthorEntries, value: bookID, fieldName: "BookID"};
+                                            let filtered = Resources["InfoTableFunctions"].EQFilter(filter);
+                                            filtered.rows.toArray().forEach(bookAuthorEntry => {
+                                                let key = {key: bookAuthorEntry.AuthorID};
+                                        		let authorEntry = Things["AuthorDataTable"].GetDataTableEntryByKey(key);
+                                        		let authorWithFullNameEntry = {
+                                            		AuthorID: authorEntry.AuthorID, // INTEGER [Primary Key]
+                                            		FullName: authorEntry.FirstName + " " + authorEntry.LastName // STRING
+                                        		};
+                                                authorsWithFullNames.AddRow(authorWithFullNameEntry);
+                                            });
+                                            return authorsWithFullNames;
+                                        }
+                                        
+                                        
+                                        function getCategoriesRelatedToBook(bookID) {
+                                            let categories = DataShapes["Category"].CreateValues();
+                                            let infoTable = Things["BookCategoryDataTable"].GetDataTableEntries({maxItems: undefined});
+                                            let filter = {t: infoTable, value: bookID, fieldName: "BookID"};
+                                            let filtered = Resources["InfoTableFunctions"].EQFilter(filter);
+                                            filtered.rows.toArray().forEach(bookCategoryEntry => {
+                                                let key = {key: bookCategoryEntry.CategoryID};
+                                                let categoryEntry = Things["CategoryDataTable"].GetDataTableEntryByKey(key);
+                                                // Category entry object
+                                        		let newEntry = {
+                                           	 		CategoryID: categoryEntry.CategoryID, // INTEGER [Primary Key]
+                                            		Name: categoryEntry.Name, // STRING
+                                            		ParentCategoryID: categoryEntry.ParentCategoryID // INTEGER
+                                        		};
+                                        
+                                                categories.AddRow(newEntry);
+                                            });
+                                            
+                                            return categories;
+                                        }
+                                        
+                                        function mergeAllData(bookEntry, authors, categories) {
+                                            let outputInfoTable = DataShapes["FullBookDataShape"].CreateValues();
+                                            let newEntry = {
+                                                BookID: bookEntry.BookID, // INTEGER [Primary Key]
+                                                Name: bookEntry.Name, // STRING
+                                                ISBN: bookEntry.ISBN, // STRING
+                                                Price: bookEntry.Price, // INTEGER
+                                                Image: "https://pp-2111290835z6.portal.ptc.io/Thingworx/FileRepositories/BookImagesRepository/" + bookEntry.Image,
+                                                Description: bookEntry.Description, // STRING
+                                                PublishingYear: bookEntry.PublishingYear, // INTEGER
+                                                NumberOfPages: bookEntry.NumberOfPages, // INTEGER
+                                                PublisherID: bookEntry.PublisherID, // INTEGER
+                                                Authors: authors, // INFOTABLE {"dataShape":"AuthorFullNameDataShape"}
+                                                Categories: categories,// INFOTABLE {"dataShape":"CategoryDataShape"}
+                                            };
+                                            
+                                            outputInfoTable.AddRow(newEntry);
+                                            return outputInfoTable;
+                                        
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions></Subscriptions>
+            </ThingShape>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations></AlertConfigurations>
+            <ImplementedShapes></ImplementedShapes>
+            <ThingProperties></ThingProperties>
+        </Thing>
+    </Things>
+</Entities>
